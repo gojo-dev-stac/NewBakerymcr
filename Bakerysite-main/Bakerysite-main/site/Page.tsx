@@ -14,11 +14,7 @@ import VisitFooter from "./components/VisitFooter";
 import SiteMotion from "./components/SiteMotion";
 import BakeryDetails from "./components/BakeryDetails";
 
-const ICON = `data:image/svg+xml,${encodeURIComponent(
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#f5ede2"/><rect x="10" y="38" width="44" height="12" fill="#cfe0b4"/><rect x="10" y="26" width="44" height="12" fill="#f7cdd3"/><rect x="10" y="14" width="44" height="12" fill="#3b2418"/></svg>`,
-)}`;
-
-/** The Bakery MCR: build a cake in Manchester. Plan + Motion map: site/DESIGN.md. */
+/** thebakerymcr: cakes, brownies and desserts in Manchester. */
 export default function Page() {
   return (
     <>
@@ -26,11 +22,9 @@ export default function Page() {
           the old page · ?record=1: hide the mouse arrow from the first frame */}
       <script
         dangerouslySetInnerHTML={{
-          __html: `history.scrollRestoration="manual";addEventListener("pagehide",function(){var c=document.createElement("div");c.style.cssText="position:fixed;inset:0;z-index:2147483647;background:#f5ede2";document.body.appendChild(c)});addEventListener("pageshow",function(e){if(e.persisted)location.reload()});if(/[?&]record/.test(location.search)){var s=document.createElement("style");s.textContent="*,*::before,*::after{cursor:none!important}html{scrollbar-width:none}html::-webkit-scrollbar{display:none}";document.head.appendChild(s)}`,
+          __html: `history.scrollRestoration="manual";addEventListener("pagehide",function(){var c=document.createElement("div");c.style.cssText="position:fixed;inset:0;z-index:2147483647;background:#fff8fb";document.body.appendChild(c)});addEventListener("pageshow",function(e){if(e.persisted)location.reload()});if(/[?&]record/.test(location.search)){var s=document.createElement("style");s.textContent="*,*::before,*::after{cursor:none!important}html{scrollbar-width:none}html::-webkit-scrollbar{display:none}";document.head.appendChild(s)}`,
         }}
       />
-      <link rel="icon" type="image/svg+xml" href={ICON} />
-      <meta property="og:image" content="/images/crumb/og.jpg" />
       <SiteFlags />
       <LayersLoader />
       <HoldPush />

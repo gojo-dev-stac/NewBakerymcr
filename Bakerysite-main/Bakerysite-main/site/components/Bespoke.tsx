@@ -7,7 +7,7 @@ import { bespoke } from "../content";
 // "Bespoke & wholesale" (the shop's order form, rebuilt as a printed order slip · Motion map M9 print-out line by line).
 // A paper slip feeds out of the printer slot above the section: the card's clip-path steps down line by line (steps(14))
 // while the fields arrive in order, so it reads like an order being printed at the counter. Left: the pitch, the
-// wholesale card and the careers note. On submit the slip is stamped "Noted" (no network: a concept form).
+// wholesale card and the careers note. The form is a local preview; enquiries go through the official contact page.
 // Phone: form below the copy, the slip feeds out the same way. ?static=1: the finished slip, stamp hidden.
 
 export default function Bespoke() {
@@ -114,17 +114,19 @@ export default function Bespoke() {
 
             <div className="slip-line mt-4 flex flex-wrap items-end justify-between gap-4 border-t border-dashed border-[rgba(59,36,24,0.35)] pt-4">
               <p className="max-w-[30ch] text-[12px] leading-snug text-muted">
-                We answer within a day, Tuesday to Sunday. Bespoke orders need 48 hours.
+                Prepare your enquiry here, then contact the bakery to place your bespoke order.
               </p>
               <button type="submit" className="btn btn-solid relative" data-cursor="Send" data-mag>
-                <span className="mag-label">{sent ? "Sent" : "Send"}</span>
+                <span className="mag-label">{sent ? "Prepared" : "Prepare enquiry"}</span>
               </button>
             </div>
 
             {sent && (
               <div className="slip-line mt-4 border-t border-dashed border-[rgba(59,36,24,0.35)] pt-3" role="status">
-                <p className="font-display text-[22px]">{bespoke.sent}</p>
-                <p className="mt-1 text-[13px] text-muted">No need to send it twice — this is a concept form, so nothing leaves the page.</p>
+                <p className="font-display text-[22px]">Your enquiry is ready.</p>
+                <p className="mt-1 text-[13px] text-muted">
+                  This preview does not send messages. <a className="link-underline" href="https://www.thebakerymcr.co.uk/pages/contact" target="_blank" rel="noreferrer">Contact thebakerymcr</a> to place your order.
+                </p>
               </div>
             )}
             {sent && (
@@ -143,7 +145,7 @@ export default function Bespoke() {
         <div className="tape-track flex w-max gap-8 whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.16em]">
           {[0, 1].map((k) => (
             <span key={k} className="flex gap-8">
-              {["Bespoke cakes · 48 hours notice", "Vintage hearts", "Children's cakes", "Cake tasters", "Cake toppers", "Online school", "Wholesale", "Corporate orders", "Ancoats, Manchester"].map((t) => (
+              {["Bento cakes", "Celebration cakes", "Vintage hearts", "Bespoke cakes", "Brownie boxes", "Wholesale", "Manchester"].map((t) => (
                 <span key={t} className="flex items-center gap-8">
                   {t}
                   <span className="inline-block h-1.5 w-1.5 bg-[var(--straw)]" />

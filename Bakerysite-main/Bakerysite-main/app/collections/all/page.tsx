@@ -13,7 +13,7 @@ import VisitFooter from "@/site/components/VisitFooter";
 
 export const metadata: Metadata = {
   title: `Shop all | ${meta.name}`,
-  description: "Browse cakes, box bakes, brownies and more from The Bakery MCR.",
+  description: "Shop bento cakes, celebration cakes, brownies and more from thebakerymcr in Manchester.",
 };
 
 export default function ShopPage() {

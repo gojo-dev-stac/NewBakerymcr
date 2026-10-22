@@ -94,7 +94,7 @@ export default function LayersLoader() {
   if (gone) return null;
 
   return (
-    <div ref={root} data-loader aria-hidden className="fixed inset-0 z-[100] overflow-hidden bg-[#f5ede2]">
+    <div ref={root} data-loader aria-hidden className="fixed inset-0 z-[100] overflow-hidden bg-[var(--cream)]">
       <div className="ld-stage absolute inset-0 grid place-items-center">
         {/* a soft strawberry-milk glow grows behind the cake from the first frame (the cake itself is small) */}
         <div className="ld-glow pointer-events-none absolute left-1/2 top-1/2 h-[95vmin] w-[95vmin] rounded-full" />
@@ -105,23 +105,24 @@ export default function LayersLoader() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={img("top-1.webp")} alt="" className="ld-berry absolute bottom-full left-1/2 mb-[-6px] w-[34%] -translate-x-1/2" />
               <span className="ld-bar ld-bar-3 block h-[clamp(20px,2.2vw,28px)] bg-[#fffaf3]" />
-              <span className="ld-bar ld-bar-2 block h-[clamp(14px,1.5vw,19px)] bg-[#c83a55]" />
-              <span className="ld-bar ld-bar-1 block h-[clamp(26px,2.8vw,36px)] bg-[#3b2418]" />
+              <span className="ld-bar ld-bar-2 block h-[clamp(14px,1.5vw,19px)] bg-[var(--straw)]" />
+              <span className="ld-bar ld-bar-1 block h-[clamp(26px,2.8vw,36px)] bg-[var(--choc)]" />
             </div>
-            <p className="font-display ld-count w-[3.2ch] text-left text-[34px] leading-none tabular-nums text-[color:#3b2418]" />
+            <p className="font-display ld-count w-[3.2ch] text-left text-[34px] leading-none tabular-nums text-[color:var(--choc)]" />
           </div>
-          <p className="ld-word font-display mt-7 text-[clamp(40px,5vw,72px)] text-[color:#3b2418]">The Bakery</p>
-          <p className="ld-sub mt-2 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#6e5243]">Manchester</p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/Mcr_products/Logo.svg" alt="thebakerymcr" className="mt-7 w-[clamp(140px,18vw,220px)]" />
+          <p className="ld-sub mt-2 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#765e6b]">Manchester</p>
         </div>
       </div>
       {/* the chocolate drip curtain (slides down, pulls away) */}
       <div className="ld-curtain absolute inset-x-0 top-[calc(-100%-14vh)] h-[calc(100%+14vh)]">
-        <div className="relative h-[calc(100%-14vh)] overflow-hidden bg-[#3b2418]">
+        <div className="relative h-[calc(100%-14vh)] overflow-hidden bg-[var(--choc)]">
           {/* a slow sheen crosses the chocolate while it covers the screen, so the hand-over is never a frozen frame */}
           <span aria-hidden className="ld-cdr-sheen absolute inset-y-0 w-[60%]" />
         </div>
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="block h-[14vh] w-full" aria-hidden>
-          <path d={DRIP} fill="#3b2418" />
+          <path d={DRIP} fill="var(--choc)" />
         </svg>
       </div>
     </div>

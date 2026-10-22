@@ -81,7 +81,7 @@ export default function ClassicHeader() {
         <div className="container-x flex h-full items-center justify-between gap-6">
           <p className="hf-in truncate max-lg:hidden">{announce.left}</p>
           <a
-            href={pathname === "/collections/all" ? "#top" : "#counter"}
+            href={pathname.startsWith("/collections/") ? "#top" : "#counter"}
             className="hf-in group mx-auto flex items-center gap-2 whitespace-nowrap max-lg:mx-0"
           >
             <span>{announce.centre}</span>
@@ -100,14 +100,15 @@ export default function ClassicHeader() {
             const href =
               l.label === "Shop"
                 ? "/collections/all"
-                : pathname === "/collections/all"
+                : pathname.startsWith("/collections/")
                   ? `/${l.href}`
                   : l.href;
+            const isCurrentPage = l.label === "Shop" ? pathname.startsWith("/collections/") : pathname === "/";
             return (
               <a
                 key={l.href}
                 href={href}
-                className={`nav-link hf-in ${i === 0 && pathname !== "/collections/all" || l.label === "Shop" && pathname === "/collections/all" ? "is-here" : ""}`}
+                className={`nav-link hf-in ${isCurrentPage ? "is-here" : ""}`}
               >
                 {l.label}
               </a>
@@ -128,26 +129,17 @@ export default function ClassicHeader() {
             <span className="label">{open ? "Close" : "Menu"}</span>
           </button>
 
-          {/* wordmark centre */}
-          <a href="#top" className="wordmark hf-in group" aria-label="The Bakery MCR, home">
-            <span aria-hidden className="hf-orn word-orn">
-              <span className="orn-line" />
-              <span className="orn-diamond" />
-              <span className="orn-line" />
-            </span>
-            <span className="word-main">The Bakery</span>
-            <span className="word-sub">
-              <span className="word-rule" aria-hidden />
-              Manchester
-              <span className="word-rule" aria-hidden />
-            </span>
+          {/* the bakery's supplied logo */}
+          <a href="/#top" className="wordmark hf-in group" aria-label="thebakerymcr home">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/Mcr_products/Logo.svg" alt="thebakerymcr" className="word-logo" />
           </a>
 
           {/* utilities right */}
           <div className="flex items-center justify-end gap-5">
             <span className="hf-in hidden text-right max-md:!hidden lg:block">
-              <span className="label block text-muted">Open today</span>
-              <span className="text-[13px] leading-tight">9 am – 5 pm</span>
+              <span className="label block text-muted">Freshly baked</span>
+              <span className="text-[13px] leading-tight">Same-day cakes</span>
             </span>
             <button
               ref={pill}
@@ -177,7 +169,7 @@ export default function ClassicHeader() {
                 href={
                   l.label === "Shop"
                     ? "/collections/all"
-                    : pathname === "/collections/all"
+                    : pathname.startsWith("/collections/")
                       ? `/${l.href}`
                       : l.href
                 }
@@ -208,4 +200,4 @@ export default function ClassicHeader() {
   );
 }
 
-const visitLine = "Ancoats, Manchester · Tue–Sat 9–5, Sun 10–3 · Collection & UK postal";
+const visitLine = "Manchester · Same-day cakes · Collection & postal";

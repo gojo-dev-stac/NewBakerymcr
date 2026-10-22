@@ -1,15 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { usePathname } from "next/navigation";
 import { basket, order, type BasketLine } from "../cart";
 import { gbp } from "../content";
 
-// The shop basket (the header's "Basket" pill): a paper drawer that slides in from the right with every line that
-// was added (steppers, remove, subtotal), a collection/post choice, name + email, and Place order → a printed
-// confirmation slip. While it is closed, adding something drops a small paper slip under the bar that says what
-// was added and opens the drawer on tap. Pure CSS transitions (so ?static=1 shows it instantly, no motion).
-type Placed = { ref: string; lines: BasketLine[]; total: number; fulfil: "collect" | "post"; name: string; email: string };
+// The basket collects order details locally and shows a confirmation preview; it does not submit orders or payments.
+type Placed = {
+  ref: string;
+  lines: BasketLine[];
+  total: number;
+  fulfil: "collect" | "post";
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+};
 
 export default function Basket() {
   const pathname = usePathname();
@@ -18,6 +24,11 @@ export default function Basket() {
   const [fulfil, setFulfil] = useState<"collect" | "post">("collect");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [addressLine1, setAddressLine1] = useState("");
+  const [addressLine2, setAddressLine2] = useState("");
+  const [city, setCity] = useState("");
+  const [postcode, setPostcode] = useState("");
   const [placed, setPlaced] = useState<Placed | null>(null);
 
   useEffect(() => basket.subscribe(setOpen), []);
@@ -35,7 +46,12 @@ export default function Basket() {
 
   const total = lines.reduce((s, l) => s + l.price * l.qty, 0);
   const items = lines.reduce((n, l) => n + l.qty, 0);
-  const ready = name.trim().length > 1 && /.+@.+\..+/.test(email);
+  const needsAddress = fulfil === "post";
+  const ready =
+    name.trim().length > 1 &&
+    /.+@.+\..+/.test(email) &&
+    phone.trim().length > 4 &&
+    (!needsAddress || (addressLine1.trim().length > 0 && city.trim().length > 0 && postcode.trim().length > 0));
 
   const close = () => {
     basket.close();
@@ -43,10 +59,16 @@ export default function Basket() {
       setPlaced(null);
       setName("");
       setEmail("");
+      setPhone("");
+      setAddressLine1("");
+      setAddressLine2("");
+      setCity("");
+      setPostcode("");
     }, 500);
   };
 
-  const place = () => {
+  const place = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     if (!ready || lines.length === 0) return;
     setPlaced({
       ref: `MCR-${1400 + Math.floor(Math.random() * 500)}`,
@@ -55,6 +77,14 @@ export default function Basket() {
       fulfil,
       name: name.trim(),
       email: email.trim(),
+      phone: phone.trim(),
+      address:
+        fulfil === "post"
+          ? [addressLine1, addressLine2, city, postcode]
+              .map((part) => part.trim())
+              .filter(Boolean)
+              .join(", ")
+          : "",
     });
     order.clear();
   };
@@ -72,7 +102,7 @@ export default function Basket() {
       >
         <div className="basket-head">
           <div className="flex items-center justify-between gap-4">
-            <p className="label text-[color:var(--straw)]">The Bakery MCR · order</p>
+            <p className="label text-[color:var(--straw)]">thebakerymcr · order</p>
             <button
               type="button"
               className="basket-x"
@@ -84,7 +114,7 @@ export default function Basket() {
             </button>
           </div>
           <h2 className="font-display mt-3 text-[clamp(30px,3vw,40px)] leading-none">
-            {placed ? "Order placed." : "Your basket"}
+            {placed ? "Order details." : "Your basket"}
           </h2>
           <p className="mt-2 text-[13px] text-muted">
             {placed ? placed.ref : items > 0 ? `${items} ${items === 1 ? "item" : "items"} · ${gbp(total)}` : "Nothing added yet"}
@@ -92,12 +122,11 @@ export default function Basket() {
           <span aria-hidden className="basket-rule" />
         </div>
 
-        <div className="basket-body">
+        <div className="basket-body" data-lenis-prevent>
           {placed ? (
             <div className="basket-done">
               <p className="text-[15px] leading-[1.6]">
-                Thanks {placed.name} — we have it. We&apos;ll email <span className="font-semibold">{placed.email}</span> when
-                it&apos;s ready.
+                Your order details are ready, {placed.name}. They have not been sent and no payment has been taken.
               </p>
               <div className="basket-slip">
                 {placed.lines.map((l) => (
@@ -114,19 +143,39 @@ export default function Basket() {
                   <span className="tabular-nums">{gbp(placed.total)}</span>
                 </p>
               </div>
+              <div className="basket-slip">
+                <p className="basket-slip-row">
+                  <span>Name</span>
+                  <span className="text-right">{placed.name}</span>
+                </p>
+                <p className="basket-slip-row">
+                  <span>Email</span>
+                  <span className="text-right">{placed.email}</span>
+                </p>
+                <p className="basket-slip-row">
+                  <span>Phone</span>
+                  <span className="text-right">{placed.phone}</span>
+                </p>
+                {placed.address && (
+                  <p className="basket-slip-row">
+                    <span>Delivery address</span>
+                    <span className="text-right">{placed.address}</span>
+                  </p>
+                )}
+              </div>
               <p className="label text-[color:var(--straw)]">
-                {placed.fulfil === "collect" ? "Collect from the counter · Ancoats" : "Posted UK-wide · next Thursday"}
+                {placed.fulfil === "collect" ? "Collection selected" : "Postal delivery selected"}
               </p>
               <p className="text-[13px] leading-snug text-muted">
                 {placed.fulfil === "collect"
-                  ? "Tue–Sat 9–5, Sun 10–3. Same-day if you order before 11 am."
-                  : "Tracked, in a sturdy box. Cut and packed the morning it leaves."}
+                  ? "Contact the bakery to confirm collection details and availability."
+                  : "Contact the bakery to confirm postal availability and delivery timing."}
               </p>
               <button type="button" className="btn btn-solid w-full" onClick={close} data-cursor="Done">
                 Done
               </button>
               <p className="text-[12px] leading-snug text-muted">
-                Concept website — no payment is taken, prices are samples.
+                This site is not connected to the bakery’s ordering or payment system yet, so this confirmation is only shown here.
               </p>
             </div>
           ) : lines.length === 0 ? (
@@ -190,7 +239,11 @@ export default function Basket() {
                 <span className="font-display text-[clamp(28px,3vw,36px)] leading-none tabular-nums">{gbp(total)}</span>
               </p>
 
-              <div className="basket-form">
+              <form
+                className="basket-form"
+                onSubmit={place}
+                aria-label="Order details"
+              >
                 <p className="label text-muted">How would you like it?</p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {(["collect", "post"] as const).map((v) => (
@@ -202,7 +255,7 @@ export default function Basket() {
                       className="chip border-[1.5px] border-[var(--choc)] px-3.5 py-2 text-[14px] font-medium aria-pressed:bg-[var(--choc)] aria-pressed:text-[var(--paper)]"
                       data-cursor="Pick"
                     >
-                      {v === "collect" ? "Collection · Ancoats" : "Post · Thursday"}
+                      {v === "collect" ? "Collection" : "Postal delivery"}
                     </button>
                   ))}
                 </div>
@@ -211,6 +264,8 @@ export default function Basket() {
                   <span className="label block text-muted">Your name</span>
                   <input
                     className="basket-input"
+                    type="text"
+                    required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Amara Khan"
@@ -222,26 +277,88 @@ export default function Basket() {
                   <input
                     className="basket-input"
                     type="email"
+                    required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
                     autoComplete="email"
                   />
                 </label>
+                <label className="mt-4 block">
+                  <span className="label block text-muted">Phone number</span>
+                  <input
+                    className="basket-input"
+                    type="tel"
+                    required
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="07123 456789"
+                    autoComplete="tel"
+                  />
+                </label>
+
+                {needsAddress && (
+                  <fieldset className="basket-address">
+                    <legend className="label text-muted">Delivery address</legend>
+                    <label className="mt-3 block">
+                      <span className="label block text-muted">Address line 1</span>
+                      <input
+                        className="basket-input"
+                        type="text"
+                        required
+                        value={addressLine1}
+                        onChange={(e) => setAddressLine1(e.target.value)}
+                        placeholder="House number and street"
+                        autoComplete="address-line1"
+                      />
+                    </label>
+                    <label className="mt-4 block">
+                      <span className="label block text-muted">Address line 2 (optional)</span>
+                      <input
+                        className="basket-input"
+                        type="text"
+                        value={addressLine2}
+                        onChange={(e) => setAddressLine2(e.target.value)}
+                        autoComplete="address-line2"
+                      />
+                    </label>
+                    <label className="mt-4 block">
+                      <span className="label block text-muted">Town or city</span>
+                      <input
+                        className="basket-input"
+                        type="text"
+                        required
+                        value={city}
+                        onChange={(e) => setCity(e.target.value)}
+                        autoComplete="address-level2"
+                      />
+                    </label>
+                    <label className="mt-4 block">
+                      <span className="label block text-muted">Postcode</span>
+                      <input
+                        className="basket-input"
+                        type="text"
+                        required
+                        value={postcode}
+                        onChange={(e) => setPostcode(e.target.value)}
+                        autoComplete="postal-code"
+                      />
+                    </label>
+                  </fieldset>
+                )}
 
                 <button
-                  type="button"
+                  type="submit"
                   className="btn btn-solid mt-5 w-full"
                   disabled={!ready}
-                  onClick={place}
                   data-cursor="Place"
                 >
-                  Place order · {gbp(total)}
+                  {needsAddress ? "Continue with delivery" : "Continue with collection"} · {gbp(total)}
                 </button>
                 <p className="text-[12px] leading-snug text-muted">
-                  Order by 11 am for same-day collection in Manchester. Concept study — no payment is taken.
+                  This creates an order preview only. Your details are not sent and no payment is taken.
                 </p>
-              </div>
+              </form>
             </>
           )}
         </div>

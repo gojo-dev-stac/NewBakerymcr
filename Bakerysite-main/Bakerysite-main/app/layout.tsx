@@ -8,6 +8,12 @@ import { meta, theme } from "@/site/site";
 export const metadata: Metadata = {
   title: meta.title,
   description: meta.description,
+  icons: { icon: "/Mcr_products/Logo.svg" },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    images: ["https://www.thebakerymcr.co.uk/cdn/shop/files/the-bakery-manchester-leverstreet9.jpg?v=1743708285&width=1500"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

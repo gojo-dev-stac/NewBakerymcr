@@ -1,8 +1,8 @@
-# Crumb & Co: design direction (Day 8)
+# thebakerymcr: visual direction
 
-**Brand:** Crumb & Co, a concept pâtisserie / cake shop (Hyderabad, prices in ₹).
-**Hook:** *Build a cake by scrolling.*
-**Feel:** bright daylight pâtisserie. Cream paper, chocolate ink, square pastel blocks. Calm, confident motion with a soft landing, no bounce.
+**Brand:** thebakerymcr, a Manchester bakery (prices in £).
+**Reference:** thebakerymcr's supplied logo, product photography and pink-led palette.
+**Feel:** soft bakery pink, warm cream, dark ink, authentic product photos, and calm motion with a soft landing.
 
 Uniqueness: 8 of 8 different from the last three sites (see the sites log).
 
@@ -13,7 +13,7 @@ Uniqueness: 8 of 8 different from the last three sites (see the sites log).
 | Menu | Pick | Why (this site) |
 |---|---|---|
 | Look | **L20 Storybook geometry**, daylight pâtisserie | Square pastel blocks that meet edge to edge, like the layers of a cut cake. One pastel per chapter, small centred labels, sideways page wipes. It feels light and bright and still looks grown-up. |
-| Palette | **Pâtisserie daylight** (custom) | bg cream `#F5EDE2` (**measured**: the films' backdrop on the left; it fades to blush `#E9CEC7` on the right, so film stages use a cream → blush gradient) · surface `#FFFFFF` / paper `#FFFAF3` · text chocolate `#3B2418` (12.5:1) · muted `#6E5243` (6.1:1) · accent strawberry `#B8304C` (5.1:1 on cream, cream text on it 5.6:1). Chapter blocks: pistachio `#CFE0B4`, strawberry milk `#F7CDD3`, chocolate band `#3B2418`. Chocolate is the main ink, so the page doesn't read as "pink because cake"; strawberry only on buttons, the order pill and one word per section. |
+| Palette | **thebakerymcr pink** | Logo pink `#F5A0C5`, pale blush `#F8DCE9`, warm cream `#FFF8FB`, dark ink `#33252C`, and a darker pink accent `#B83F78` for readable buttons and highlights. |
 | Type | **T11 Bricolage Grotesque + Onest** | Bricolage at heavy weight and a slightly narrow width gives friendly, chunky headlines that suit a shop selling by the kilo. Onest is clean for prices and order details. Display tracking −0.03em, line-height 1.05. No script font. |
 | Nav | **N11 split bars**, built from **NV11 three islands** | Left: the wordmark. Centre: Menu · Build · Inside · Visit. Right: Pickup/Delivery toggle + the strawberry **Order (0)** pill. Over the hero the islands slide apart to keep the stage clear. The order pill is the landing spot for F8. |
 | Hero | **"Build a ___ by scrolling."** over a landscape stage (HR28) | The cake stacks itself onto the stand (hero-build video). The missing word melts from one word to the next as each layer lands (*base → jam → crème → cake*, on the video's sponge → strawberry jam → cream → … → frosting beats), so the sentence finishes exactly when the cake does. It is not a portal, and nothing grows to full screen. |
@@ -103,7 +103,7 @@ No code is used twice, there are no plain fades, and the hero (M59) and signatur
 
 **Round 5 notes (final):**
 - Record run trimmed to 30.4 s (counter hold 3 s = 2 featured changes, footer hold 2 s, every film segment tightened; every key moment kept).
-- New loader "Cake bar" (replaces the colour layers): on cream, a small cake builds itself as the progress bar (chocolate base, strawberry jam, cream; hairline outlines), a 0 → 100 counter, a strawberry drops on top with a small bounce, "Crumb & Co" fades in, then a chocolate drip curtain slides down and pulls back up onto the hero (≈ 1.9 s). The build is CSS from the first paint; JS waits for the hero frames and runs the curtain; the hero starts as the curtain covers.
+- New loader "Cake bar" (replaces the colour layers): on cream, a small cake builds itself as the progress bar (chocolate base, strawberry jam, cream; hairline outlines), a 0 → 100 counter, a strawberry drops on top with a small bounce, the bakery logo fades in, then a chocolate drip curtain slides down and pulls back up onto the hero (≈ 1.9 s). The build is CSS from the first paint; JS waits for the hero frames and runs the curtain; the hero starts as the curtain covers.
 - Build your own: nothing changes by itself on a normal visit. In ?record=1 only, one chip per row is clicked in order (Shape → Heart, Sponge → Chocolate, Finish → Berry crown, Size → 1 kg): the chip presses, then the cake changes, then the price rolls. No looping.
 
 **Details (each also plays once by itself on camera):** the order pill count bumps when something is added · strawberry fill wipe on buttons · cursor labels "Add" on cake tiles, "Pick" on builder chips · magnetic [Order a cake] in the hero · price flips when a builder choice changes · the perforated stub tears a little on hover (one tile tears by itself while open).

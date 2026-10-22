@@ -187,7 +187,7 @@ export default function CakeCounter() {
           <article className={`ticket feat-tile tone-${cakes[open].tone} col-span-2 row-span-2 border-[1.5px] border-[var(--choc)] max-md:row-span-2`} data-cursor="Add">
             <div className="relative min-h-0 flex-1">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img key={cakes[open].no} src={cakes[open].img} alt={cakes[open].name} className="feat-img absolute left-[50%] top-[4%] h-[94%] w-auto -translate-x-1/2 object-contain" />
+              <img key={cakes[open].no} src={cakes[open].img} alt={cakes[open].name} className="feat-img absolute inset-0 h-full w-full object-contain" />
               <span className="feat-text label absolute left-4 top-4">On the stand · Nº {cakes[open].no}</span>
             </div>
             <div className="ticket-stub flex items-end justify-between gap-4 px-5 py-4" style={{ ["--notch" as string]: "var(--cream)" }}>
@@ -215,7 +215,7 @@ export default function CakeCounter() {
               {open === i && <span aria-hidden data-flip-id="feat-frame" className="feat-frame pointer-events-none absolute -inset-[5px] z-[2] border-[3px] border-[var(--straw)]" />}
               <div className="relative min-h-0 flex-1">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={c.img} alt={c.name} className={`cake-img absolute left-1/2 top-1/2 h-[90%] w-auto -translate-x-1/2 -translate-y-1/2 object-contain transition-opacity duration-300 ${open === i ? "opacity-40" : ""}`} />
+                <img src={c.img} alt={c.name} className={`cake-img absolute inset-0 h-full w-full object-contain transition-opacity duration-300 ${open === i ? "opacity-40" : ""}`} />
                 <span className="label absolute left-3 top-3">Nº {c.no}</span>
               </div>
               <div className="ticket-stub flex items-end justify-between gap-2 px-3 py-2.5" style={{ ["--notch" as string]: "var(--cream)" }}>

@@ -1,5 +1,5 @@
-// All text + data for The Bakery MCR (Manchester bakery, prices in £). Design: site/DESIGN.md.
-// Everything here is a concept edition of the shop's real range: bento cakes, vintage hearts, cookies, brownies,
+// All text + data for thebakerymcr (Manchester bakery, prices in £). Design: site/DESIGN.md.
+// The range includes bento cakes, vintage hearts, cookies, brownies,
 // tray bakes, cake mixes, collection & postal, bespoke and wholesale.
 import type { Film } from "./components/film";
 
@@ -68,8 +68,8 @@ export const hero = {
   ],
   // layer meter (1 → 7) by video second
   layers: [1.25, 1.35, 1.9, 2.4, 2.55, 3.4, 6.0],
-  copy: "Stuffed cookies, brownies and celebration cakes, baked every morning in our Manchester kitchen. Same-day cakes, collection from the counter, and boxes posted UK-wide every Thursday.",
-  ctas: ["Shop the counter", "Bespoke cakes"],
+  copy: "Bento cakes, celebration cakes, stuffed cookies and brownies from thebakerymcr. Find your favourite, or get in touch about a bespoke cake.",
+  ctas: ["Shop now", "Bespoke cakes"],
 };
 
 export const crown = {
@@ -86,32 +86,32 @@ export const crown = {
 
 export type Cake = { no: string; name: string; note: string; price: number; img: string; tone: string; size: string };
 export const cakes: Cake[] = [
-  { no: "01", name: "Chocolate Drip Cake", note: "Three chocolate sponges, fudge buttercream, dark chocolate drip, brownie crumb", price: 55, img: img("cake-crown.webp"), tone: "pink", size: "8 inch" },
-  { no: "02", name: "Pink Bento Cake", note: "Vanilla or chocolate sponge, piped by hand in the box, feeds two to four", price: 40, img: img("cake-vanilla.webp"), tone: "cream", size: "4 inch" },
-  { no: "03", name: "Pistachio Dubai Cake", note: "Pistachio buttercream, crushed pistachio, crisp kataifi, dried rose", price: 65, img: img("cake-pistachio.webp"), tone: "pistachio", size: "8 inch" },
-  { no: "04", name: "Vintage Heart Cake", note: "Piped vanilla cream, a cherry on top, feeds three to five (from £65)", price: 85, img: img("cake-strawberry.webp"), tone: "blush", size: "8 inch" },
+  { no: "01", name: "8 Inch Pink Heart Cake", note: "A pink heart cake for a special celebration", price: 85, img: "/shop-products/8-inch-pink-heart-cake-1.webp", tone: "pink", size: "8 inch" },
+  { no: "02", name: "Pink Bento Piped Cake", note: "A delicately piped cake for a special occasion", price: 40, img: "/shop-products/pink-bento-piped-cake-1.webp", tone: "cream", size: "Bento" },
+  { no: "03", name: "Purple Piped Bento Cake", note: "A purple piped cake, made for a special occasion", price: 40, img: "/shop-products/purple-piped-bento-cake-1.webp", tone: "pistachio", size: "Bento" },
+  { no: "04", name: "Whole Rainbow Cake", note: "Six colourful vanilla layers with creamy buttercream", price: 100, img: "/shop-products/whole-rainbow-cake-1.webp", tone: "blush", size: "Whole cake" },
 ];
 export const counterSmall = [
   { name: "Mixed Cookie Box", price: "£35" },
-  { name: "Brownie Box of 6", price: "£28" },
-  { name: "Cupcake Box of 4", price: "£20" },
-  { name: "Cake Mix", price: "£6.99" },
+  { name: "Valentines Brownie Box", price: "£22" },
+  { name: "Mixed Cupcake Box", price: "£20" },
+  { name: "Vanilla Cake Mix", price: "£9" },
 ];
 export const counter = {
   title: "Out of the oven at seven.",
-  sub: "Bento cakes, vintage hearts and celebration cakes, with cookies, brownies and tray bakes from the counter. Everything is baked the morning you collect it.",
+  sub: "Pink and purple piped bento cakes, love-heart cakes, brownies and more from thebakerymcr in Manchester.",
 };
 
 /** The shop's collections, as a rail above the counter (supporting marquee inside the counter's motion code). */
 export const collections = [
-  { name: "Bento cakes", price: "£40", note: "feeds two to four" },
-  { name: "Vintage hearts", price: "from £65", note: "six or eight inch" },
-  { name: "Cookie boxes", price: "£24–35", note: "stuffed, boxed by four" },
-  { name: "Brownie boxes", price: "£20–30", note: "biscoff, oreo, mixed" },
-  { name: "Tray bakes", price: "£5.49", note: "old school, iced" },
-  { name: "Cupcakes", price: "£20", note: "four or eight" },
-  { name: "Cake mixes", price: "£6.99–9", note: "bake it at home" },
-  { name: "Vegan & gluten free", price: "on request", note: "same price" },
+  { name: "Bespoke cakes", price: "£18–100", note: "pink heart, rainbow, Valentine" },
+  { name: "Bento cakes", price: "£40", note: "pink or purple piped" },
+  { name: "Cake boxes", price: "£15–35", note: "birthday, mixed, pick your own" },
+  { name: "Brownie boxes", price: "£20–30", note: "Biscoff, Oreo, mixed, Valentine" },
+  { name: "Tray bakes", price: "£5.49", note: "Biscoff or old-school" },
+  { name: "Cupcakes", price: "£20–30", note: "mixed or Valentine boxes" },
+  { name: "Cookie boxes", price: "£24–35", note: "mixed cookie boxes" },
+  { name: "Cake & brownie mixes", price: "£6.99–9", note: "bake at home" },
 ];
 
 export const inside = {
@@ -190,16 +190,15 @@ export const bespoke = {
 };
 
 export const visit = {
-  studio: ["The Bakery MCR", "Ancoats, Manchester"],
-  hours: ["Tue–Sat · 9 am – 5 pm", "Sun · 10 am – 3 pm · Monday closed"],
-  counter: ["Collect from the counter", "Postal boxes leave every Thursday"],
-  note: "A design study of The Bakery MCR, Manchester — not affiliated; prices are samples.",
+  studio: ["thebakerymcr", "Manchester"],
+  ordering: ["Same-day cakes available", "Bespoke cake enquiries welcome"],
+  counter: ["Collection available", "Postal boxes available"],
 };
 
 export const announce = {
-  left: "Est. Manchester · Baked every morning",
-  centre: "Manchester's freshest desserts",
-  right: "Same-day cakes · Collection & postal",
+  left: "thebakerymcr · Manchester",
+  centre: "Manchester's best cakes",
+  right: "Same-day cakes · Bespoke orders",
 };
 
 export const nav = {

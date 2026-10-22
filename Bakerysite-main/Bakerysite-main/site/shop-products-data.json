@@ -1,0 +1,843 @@
+[
+  {
+    "name": "8 Inch Pink Heart Cake",
+    "handle": "8-inch-pink-heart-cake",
+    "price": 85.0,
+    "maxPrice": 85.0,
+    "category": "Celebration cakes",
+    "kind": "cake",
+    "description": "Indulge in a delectable treat with our Pink Heart Cake! This 8 inch cake features a delightful pink heart design that will make any occasion even more special. With its moist and flavourful texture, it's the perfect addition to any celebration. Order yours today and taste the love! Make sure you celebrate in style with the perfectly delicious cake",
+    "images": [
+      "/shop-products/8-inch-pink-heart-cake-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all",
+      "bespoke-cake"
+    ]
+  },
+  {
+    "name": "Birthday Cake Box Of 4",
+    "handle": "birthday-cake-box-of-4",
+    "price": 25.0,
+    "maxPrice": 25.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in our Birthday Cake Box of 4! Each slice is a delicious treat, perfect for any celebration. With four slices, there's enough to share or enjoy yourself. Made with high-quality ingredients and baked to perfection, it's the ultimate birthday treat. Don't miss out!",
+    "images": [
+      "/shop-products/birthday-cake-box-of-4-1.webp",
+      "/shop-products/birthday-cake-box-of-4-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Birthday Cake Box Of 6",
+    "handle": "birthday-cake-box-of-6",
+    "price": 32.0,
+    "maxPrice": 32.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in our delicious and freshly-baked Birthday Cake Box of 6. Each cake is crafted with premium ingredients, sure to delight your taste buds. Perfect for any celebration, our cakes are a delectable treat for both young and old. Order now to make your celebration even sweeter!",
+    "images": [
+      "/shop-products/birthday-cake-box-of-6-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Biscoff & Oreo Cake Mixed Box Of 4",
+    "handle": "biscoff-oreo-cake-mixed-box-of-4",
+    "price": 24.0,
+    "maxPrice": 24.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in a delicious treat with our Biscoff & Oreo Cake Mixed Box Of 4. Each box contains a combination of two beloved flavours, providing a unique and satisfying taste. Savour the perfect balance of rich Biscoff and creamy Oreo, delivering a mouth-watering experience with every bite.",
+    "images": [
+      "/shop-products/biscoff-oreo-cake-mixed-box-of-4-1.webp",
+      "/shop-products/biscoff-oreo-cake-mixed-box-of-4-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Biscoff & Oreo Cake Mixed Box Of 6",
+    "handle": "biscoff-oreo-cake-mixed-box-of-6",
+    "price": 24.0,
+    "maxPrice": 24.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in a mix of Biscoff and Oreo flavours with our delicious Biscoff & Oreo Cake Mixed Box Of 6. Perfect for any occasion, each box contains 6 delectable cakes bursting with a harmonious blend of rich Biscoff and smooth Oreo. Satisfy your taste buds with this heavenly combination.",
+    "images": [
+      "/shop-products/biscoff-oreo-cake-mixed-box-of-6-1.webp",
+      "/shop-products/biscoff-oreo-cake-mixed-box-of-6-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Biscoff Brownie & Cornflake Tart Box Of 4",
+    "handle": "biscoff-brownie-cornflake-tart-box-of-4",
+    "price": 22.0,
+    "maxPrice": 22.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in a delicious treat with our Biscoff Brownie & Cornflake Tart Box Of 4. Experience the perfect balance of rich, gooey brownie and crispy, crunchy cornflakes, topped with irresistible Biscoff spread. Satisfy your sweet tooth with each bite of this expertly crafted dessert.",
+    "images": [
+      "/shop-products/biscoff-brownie-cornflake-tart-box-of-4-1.webp",
+      "/shop-products/biscoff-brownie-cornflake-tart-box-of-4-2.webp",
+      "/shop-products/biscoff-brownie-cornflake-tart-box-of-4-3.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Biscoff Brownie Box Of 4",
+    "handle": "biscoff-brownie-box-of-4",
+    "price": 24.0,
+    "maxPrice": 24.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in the perfect combination of rich, fudgy brownies and the irresistible flavor of Biscoff. Each box contains 4 decadent brownies, making it the ideal treat for sharing or savouring all by yourself. Experience the delight of Biscoff in every bite with our Biscoff Brownie!",
+    "images": [
+      "/shop-products/biscoff-brownie-box-of-4-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Biscoff Chocolate Sponge & Cornflake Tart Box Of 4",
+    "handle": "biscoff-chocolate-sponge-cornflake-tart-box-of-4",
+    "price": 21.0,
+    "maxPrice": 21.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in the perfect combination of Biscoff rich chocolate sponge, topped with buttercream, Biscoff sauce and Crumbs, along with cornflae tarts- a tartlet with raspberry seeded jam, and cornflakes soaked in golden syrup . This box of 4 will satisfy your sweet tooth cravings with each bite. Treat yourself or share with friends and family for a delightful dessert experience. Pair it with hot custard or fresh ice cream.",
+    "images": [
+      "/shop-products/biscoff-chocolate-sponge-cornflake-tart-box-of-4-1.webp",
+      "/shop-products/biscoff-chocolate-sponge-cornflake-tart-box-of-4-2.webp",
+      "/shop-products/biscoff-chocolate-sponge-cornflake-tart-box-of-4-3.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Biscoff Vanilla Sponge Baked With Biscoff Crumbs, Topped with Biscoff Sauce tray bake",
+    "handle": "biscoff-tray-bake",
+    "price": 5.49,
+    "maxPrice": 5.49,
+    "category": "Cupcakes & tray bakes",
+    "kind": "bake",
+    "description": "Biscoff Tray Bake Vanilla Sponge Baked With Biscoff Crumbs, Topped with Biscoff Sauce Indulge in the rich flavours of our Biscoff Tray Bake, expertly crafted for a perfect balance of texture and taste. This exquisite vanilla sponge is generously baked with crunchy Biscoff crumbs, offering a delightful contrast within each bite. Finished with a smooth, luscious Biscoff sauce topping, it delivers a distinctive caramelised spice note that enhances every mouthful. Ideal for sharing or enjoying with a cup of tea, this tray bake combines quality ingredients and skilled preparation to satisfy discerning palates seeking a refined treat. 500ml trays",
+    "images": [
+      "/shop-products/biscoff-tray-bake-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all",
+      "tray-bakes"
+    ]
+  },
+  {
+    "name": "Bisoff Brownie Box Of 6",
+    "handle": "bisoff-brownie-box-of-6",
+    "price": 28.0,
+    "maxPrice": 28.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in the decadent flavour of Biscoff with our brownie box of 6. Made with rich, gooey brownies and topped with crumbled Biscoff cookies, this box is a perfect addition to any dessert spread. Treat yourself or share with friends for a deliciously satisfying treat.",
+    "images": [
+      "/shop-products/bisoff-brownie-box-of-6-supplied.webp",
+      "/shop-products/bisoff-brownie-box-of-6-1.webp",
+      "/shop-products/bisoff-brownie-box-of-6-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "CHOCOLATE FUDGE BROWNIE MIX",
+    "handle": "🍫✨-chocolate-fudge-brownie-mix-✨🍫",
+    "price": 6.99,
+    "maxPrice": 6.99,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Thick. Fudgy. Crackly-top brownies — every single time Our Chocolate Fudge Brownie Mix is made using an authentic American-style recipe with real chocolate, giving you that gooey centre, rich cocoa flavour and bakery-perfect finish at home.",
+    "images": [
+      "/shop-products/chocolate-fudge-brownie-mix-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Chocolate Oreo Sponge Box Of 4",
+    "handle": "chocolate-oreo-sponge-box-of-4",
+    "price": 18.0,
+    "maxPrice": 18.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in the decadent taste of our Chocolate Oreo Sponge. Made with real Oreo cookie pieces and rich, velvety chocolate, each bite is a perfect balance of sweetness and texture. Perfect for sharing or as a special treat for yourself. Pack of 4 for ultimate satisfaction.",
+    "images": [
+      "/shop-products/chocolate-oreo-sponge-box-of-4-1.webp",
+      "/shop-products/chocolate-oreo-sponge-box-of-4-2.webp",
+      "/shop-products/chocolate-oreo-sponge-box-of-4-3.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Chocolate Oreo Sponge Box Of 6",
+    "handle": "chocolate-oreo-sponge-box-of-6",
+    "price": 30.0,
+    "maxPrice": 30.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in the rich and decadent Chocolate Oreo Sponge Box of 6. Each sponge cake is filled with layers of creamy Oreo filling and coated in a smooth chocolate glaze. Made with high-quality ingredients, these cakes are a delicious treat for any occasion.",
+    "images": [
+      "/shop-products/chocolate-oreo-sponge-box-of-6-1.webp",
+      "/shop-products/chocolate-oreo-sponge-box-of-6-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Jam Coconut Sponge Box Of 4",
+    "handle": "jam-coconut-sponge-box-of-4",
+    "price": 18.0,
+    "maxPrice": 18.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "This box of 4 jam coconut cakes is a delicious treat for any occasion. Made with rich and creamy coconut, each cake is bursting with flavourful jam filling. Perfect for snacking, sharing, or gifting, these cakes are a must-have for any dessert lover.",
+    "images": [
+      "/shop-products/jam-coconut-sponge-box-of-4-1.webp",
+      "/shop-products/jam-coconut-sponge-box-of-4-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Jam Coconut Sponge Box Of 6",
+    "handle": "jam-coconut-sponge-box-of-6",
+    "price": 30.0,
+    "maxPrice": 30.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in the perfect balance of tart and sweet with our Jam Coconut Sponge Box of 6. Made with a creamy coconut base and topped with a generous layer of jam, each bite is a heavenly blend of flavours. Savour the convenience and deliciousness of a box of 6 for all your sweet cravings.",
+    "images": [
+      "/shop-products/jam-coconut-sponge-box-of-6-1.webp",
+      "/shop-products/jam-coconut-sponge-box-of-6-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Love Heart Balloon Huddle",
+    "handle": "love-heart-balloon-huddle",
+    "price": 25.0,
+    "maxPrice": 25.0,
+    "category": "Pantry & gifts",
+    "kind": "gift",
+    "description": "Love Heart Balloon Huddle",
+    "images": [
+      "/shop-products/love-heart-balloon-huddle-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Mixed Box Of 4 Cookies!",
+    "handle": "mixed-box-of-4-cookies",
+    "price": 24.0,
+    "maxPrice": 24.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Box Of Our 4 Most Popular Cookies!",
+    "images": [
+      "/shop-products/mixed-box-of-4-cookies-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Mixed Brownie Box",
+    "handle": "mixed-brownie-box",
+    "price": 30.0,
+    "maxPrice": 30.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in a mouth-watering assortment of 6 mixed Biscoff or Oreo brownies. Each bite offers a decadent combination of rich chocolate and the signature flavors of Biscoff or Oreo. Perfect for satisfying your sweet tooth or as a gift for any occasion.",
+    "images": [
+      "/shop-products/mixed-brownie-box-1.webp",
+      "/shop-products/mixed-brownie-box-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Mixed Brownie Box Of 4",
+    "handle": "mixed-brownie-box-of-4",
+    "price": 20.0,
+    "maxPrice": 20.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in the perfect combination of Biscoff and Oreo with our Mixed Brownie Box Of 4. Each bite is a delightful fusion of smooth Biscoff or crunchy Oreo, creating a unique and irresistible taste. Treat yourself or someone special to Manchester's best Chocolate brownie experience.",
+    "images": [
+      "/shop-products/mixed-brownie-box-of-4-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Mixed Cookie Box",
+    "handle": "mixed-cookie-box",
+    "price": 35.0,
+    "maxPrice": 35.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Our best selling cookies in a box! A Box of 6 cookies",
+    "images": [
+      "/shop-products/mixed-cookie-box-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Mixed Cupcake Box - 4 Or 8",
+    "handle": "mixed-cupcake-box-4-or-8",
+    "price": 20.0,
+    "maxPrice": 20.0,
+    "category": "Cupcakes & tray bakes",
+    "kind": "bake",
+    "description": "Indulge in our delightful Mixed Cupcake Box, featuring an irresistible selection of gourmet cupcakes in an array of flavors. Perfect for any occasion, this box can include rich chocolate, velvety vanilla, zesty lemon, or decadent red velvet, all topped with our signature buttercream frosting. Each cupcake is freshly baked and beautifully decorated, making it a sweet surprise for parties, celebrations, or a special treat just for you. Order now and treat yourself or someone you love to this delicious assortment!",
+    "images": [
+      "/shop-products/mixed-cupcake-box-4-or-8-1.webp"
+    ],
+    "variantOptions": [
+      "Red-Velvet",
+      "Chocolate",
+      "Vanilla"
+    ],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Old School Box Of 4",
+    "handle": "old-school-box-of-4",
+    "price": 24.0,
+    "maxPrice": 24.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "old school cake box of 4 This Old School Box of 4 is a classic and timeless choice for any cake lover. With its original design, it adds a touch of nostalgia to any palette. Made with high-quality ingredients, it is sure to withstand the test of time. Perfect as a gift of personal indulgence. Think, Light, fluffy and moist!! The Bakery MCR really does make the best cakes in the uk!",
+    "images": [
+      "/shop-products/old-school-box-of-4-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Old School Boxed Cake!",
+    "handle": "old-school-boxed-cake",
+    "price": 15.0,
+    "maxPrice": 15.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "The Bakery’s Famous Old School Cake In A Box! Get transported back to your school days",
+    "images": [
+      "/shop-products/old-school-boxed-cake-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Old School Cake Box Of 6",
+    "handle": "old-school-cake-box-of-6",
+    "price": 32.0,
+    "maxPrice": 32.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in nostalgia with our Old School Cake Box of 6. These classic treats are sure to transport you back in time with their traditional flavors and homemade taste. Perfect for sharing with friends and family, this box of 6 is ideal for any occasion. Don't miss out on this throwback to simpler times.",
+    "images": [
+      "/shop-products/old-school-cake-box-of-6-1.webp",
+      "/shop-products/old-school-cake-box-of-6-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Old School Tray Bake Vanilla Sponge Topped With Icing & Sprinkles tray bake",
+    "handle": "biscoff-tray-bake-copy",
+    "price": 5.49,
+    "maxPrice": 5.49,
+    "category": "Cupcakes & tray bakes",
+    "kind": "bake",
+    "description": "Old School Tray Bake Vanilla Sponge Topped With Icing & Sprinkles Bring a smile to your day with our Old School Tray Bake Vanilla Sponge, a playful twist on a beloved classic! This fluffy vanilla sponge is topped with a cheeky layer of sweet icing and sprinkled with a burst of colourful sprinkles that dance on your tongue. Each slice promises a fun and tasty adventure, perfect for sharing mischievous moments with friends or brightening up any snack time. Dive into a tray full of nostalgic joy and let every bite take you back to carefree, sprinkle-covered celebrations! 500ml",
+    "images": [
+      "/shop-products/biscoff-tray-bake-copy-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all",
+      "tray-bakes"
+    ]
+  },
+  {
+    "name": "Oreo & Red-Velvet Cake Box Of 4",
+    "handle": "oreo-red-velvet-cake-box-of-4",
+    "price": 24.0,
+    "maxPrice": 24.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in a delicious combination of classic Oreo cookies and rich, decadent red velvet cake with our Oreo & Red-Velvet Cake box of 4. Perfect for sharing or just treating yourself, each box contains four delectable cakes that will satisfy any sweet tooth. We're here to help you celebrate birthdays, weddings, graduations, or just simply give you an excuse to eat cake.",
+    "images": [
+      "/shop-products/oreo-red-velvet-cake-box-of-4-1.webp",
+      "/shop-products/oreo-red-velvet-cake-box-of-4-2.webp",
+      "/shop-products/oreo-red-velvet-cake-box-of-4-3.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Oreo & Red-Velvet Cake Box Of 6",
+    "handle": "oreo-red-velvet-cake-box-of-6",
+    "price": 32.0,
+    "maxPrice": 32.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in the perfect combination of classic Oreo and decadent red velvet with our Oreo & Red-Velvet Cake Box Of 6. Each bite offers the rich, creamy flavour of Oreo paired with the moist, velvety texture of red velvet. Perfect for any occasion, this box of 6 is sure to please any dessert lover.",
+    "images": [
+      "/shop-products/oreo-red-velvet-cake-box-of-6-1.webp",
+      "/shop-products/oreo-red-velvet-cake-box-of-6-2.webp",
+      "/shop-products/oreo-red-velvet-cake-box-of-6-3.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Oreo Brownie Box Of 4",
+    "handle": "oreo-brownie-box-of-4",
+    "price": 20.0,
+    "maxPrice": 20.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in rich, chocolatey goodness with our Oreo Brownie Box of 4. Made with Oreos, these brownies are the perfect blend of crunchy and fudgy textures. Enjoy 4 delicious brownies in one convenient box. Satisfy your cravings with every bite.",
+    "images": [
+      "/shop-products/oreo-brownie-box-of-4-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Oreo Brownie Box Of 6",
+    "handle": "oreo-brownie-box-of-6",
+    "price": 28.0,
+    "maxPrice": 28.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in the perfect combination of chocolatey goodness with our Oreo Brownie Box of 6. Each box contains 6 mouth-watering brownies filled with chunks of Oreo cookies. Satisfy your sweet tooth and enjoy the unique blend of flavors in every bite. Perfect for sharing or treating yourself.",
+    "images": [
+      "/shop-products/oreo-brownie-box-of-6-1.webp",
+      "/shop-products/oreo-brownie-box-of-6-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Pick Your Own Box",
+    "handle": "pick-your-own-box",
+    "price": 35.0,
+    "maxPrice": 35.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "As an expert in the bakery industry, our Pick Your Own Box offers a curated selection of our top choices. With the freedom to choose your own products, you can create a personalized box filled with the bakery's finest offerings. Attracting all tastes, satisfaction is guaranteed.",
+    "images": [
+      "/shop-products/pick-your-own-box-1.webp",
+      "/shop-products/pick-your-own-box-2.webp",
+      "/shop-products/pick-your-own-box-3.webp",
+      "/shop-products/pick-your-own-box-4.webp",
+      "/shop-products/pick-your-own-box-5.webp",
+      "/shop-products/pick-your-own-box-6.webp",
+      "/shop-products/pick-your-own-box-7.webp",
+      "/shop-products/pick-your-own-box-8.webp",
+      "/shop-products/pick-your-own-box-9.webp",
+      "/shop-products/pick-your-own-box-10.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Pink Bento Piped Cake",
+    "handle": "pink-bento-piped-cake",
+    "price": 40.0,
+    "maxPrice": 40.0,
+    "category": "Celebration cakes",
+    "kind": "cake",
+    "description": "Indulge in the delicate flavors and stunning presentation of our Pink Bento Piped Cake. Made with the highest quality ingredients, this cake is expertly piped to perfection, creating a one-of-a-kind dessert experience. Perfect for birthdays, weddings, or any special occasion. Order yours today!",
+    "images": [
+      "/shop-products/pink-bento-piped-cake-1.webp",
+      "/shop-products/pink-bento-piped-cake-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Pistachio Chocolate Bar",
+    "handle": "pistachio-chocolate-bar",
+    "price": 10.0,
+    "maxPrice": 10.0,
+    "category": "Pantry & gifts",
+    "kind": "pantry",
+    "description": "Indulge in our Pistachio Kunafe Chocolate Bar, a delightful fusion of rich chocolate and the traditional flavours of kunafe. Each bite features a creamy chocolate base infused with the nutty crunch of premium pistachios and hints of sweet syrupy goodness. Perfectly crafted for dessert lovers and adventurous palates alike, this chocolate bar is a unique treat that brings a taste of Middle Eastern tradition to your snack time. Elevate your chocolate experience with this irresistible combination of textures and flavours! Our Dubai Chocolate really is the best!",
+    "images": [
+      "/shop-products/pistachio-chocolate-bar-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Pistachio Dubai Chocolate Bar!",
+    "handle": "pistachio-dubai-chocolate-bar",
+    "price": 10.0,
+    "maxPrice": 10.0,
+    "category": "Pantry & gifts",
+    "kind": "pantry",
+    "description": "The Pistachio Dubai Chocolate Bar combines the rich flavour of premium chocolate with the nutritional benefits of pistachios. Each bar provides a source of healthy fats and protein, enhancing satiety. With its unique flavour profile, this chocolate bar is a sophisticated option for those seeking a gourmet indulgence.",
+    "images": [
+      "/shop-products/pistachio-dubai-chocolate-bar-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Purple Piped Bento Cake",
+    "handle": "purple-piped-bento-cake",
+    "price": 40.0,
+    "maxPrice": 40.0,
+    "category": "Celebration cakes",
+    "kind": "cake",
+    "description": "This Purple Piped Bento Cake is expertly crafted with a unique blend of flavors that are sure to impress. The delicate purple piping adds a touch of elegance and makes for a beautiful presentation. Indulge in this delicious treat and elevate any special occasion or event.",
+    "images": [
+      "/shop-products/purple-piped-bento-cake-1.webp",
+      "/shop-products/purple-piped-bento-cake-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Red Velvet & Biscoff Mixed Cake Box Of 4",
+    "handle": "red-velvet-biscoff-mixed-cake-box-of-4",
+    "price": 24.0,
+    "maxPrice": 24.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Experience the perfect blend of flavors with our Red Velvet & Biscoff Mixed Cake Box Of 4. Indulge in the rich, velvety texture of red velvet cake paired with the deliciously unique taste of Biscoff. Perfect for sharing at parties or as a special treat for yourself.",
+    "images": [
+      "/shop-products/red-velvet-biscoff-mixed-cake-box-of-4-1.webp",
+      "/shop-products/red-velvet-biscoff-mixed-cake-box-of-4-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Red Velvet & Biscoff Mixed Cake Box Of 6",
+    "handle": "red-velvet-biscoff-mixed-cake-box-of-6",
+    "price": 32.0,
+    "maxPrice": 32.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in a delectable treat with our Red Velvet & Biscoff Mixed Cake Box Of 6. Each box contains a mix of rich, velvety red velvet and creamy, caramelised Biscoff flavours. Perfect for any occasion, these cakes are sure to satisfy any sweet tooth.",
+    "images": [
+      "/shop-products/red-velvet-biscoff-mixed-cake-box-of-6-1.webp",
+      "/shop-products/red-velvet-biscoff-mixed-cake-box-of-6-2.webp",
+      "/shop-products/red-velvet-biscoff-mixed-cake-box-of-6-3.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Red Velvet Box Of 6",
+    "handle": "red-velvet-box-of-6",
+    "price": 35.0,
+    "maxPrice": 35.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in the rich, velvety goodness of our Red Velvet Box of 6. Each box contains 6 delectable pieces of red velvet cake, perfect for sharing or treating yourself. Made with premium ingredients, this luxurious dessert will satisfy any sweet tooth.",
+    "images": [
+      "/shop-products/red-velvet-box-of-6-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Red Velvet Cake",
+    "handle": "red-velvet-cake",
+    "price": 9.0,
+    "maxPrice": 9.0,
+    "category": "Pantry & gifts",
+    "kind": "pantry",
+    "description": "Indulge in the delectable taste of Red Velvet Cake with our easy-to-use cake mix. Perfect for home baking or professional bakery use, this baking mix will have you whipping up a scrumptious and tasty cake in no time. This Red Velvet Cake Mix is sure to impress your guests with its vibrant red colour and rich flavour. The combination of moist cake and creamy frosting is simply irresistible. Our convenient packaging makes it easy to store the mix in your cupboard for whenever you need a quick dessert fix. Plus, it's halal-certified and GMO-free for added peace of mind. Experience the joy of home-baked cakes with this delicious Red Velvet Cake Mix - perfect for birthdays, holidays or any special occasion. Whether you're celebrating a childrens party, or you're learning to bake for friends and families, this is the perfect starter pack! Learn how to Bake!",
+    "images": [
+      "/shop-products/red-velvet-cake-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Red-Velvet & Cornflake Tart Box Of 4",
+    "handle": "red-velvet-cornflake-tart-box-of-4",
+    "price": 20.0,
+    "maxPrice": 20.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in our Red-Velvet & Cornflake Tart Box of 4, a decadent treat for any occasion. Filled with rich red-velvet cake and crunchy cornflakes Tarts , each bite offers a unique combination of textures and flavours. Perfect for sharing with friends or as a special gift. Order now and experience the deliciousness yourself!",
+    "images": [
+      "/shop-products/red-velvet-cornflake-tart-box-of-4-1.webp",
+      "/shop-products/red-velvet-cornflake-tart-box-of-4-2.webp",
+      "/shop-products/red-velvet-cornflake-tart-box-of-4-3.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Red-Velvet Box Of 4",
+    "handle": "red-velvet-box-of-4",
+    "price": 24.0,
+    "maxPrice": 24.0,
+    "category": "Cupcakes & tray bakes",
+    "kind": "bake",
+    "description": "Indulge in a rich and decadent dessert with our Red-Velvet cupcake Box Of 4. Made with premium ingredients and expertly crafted, each bite is a perfect balance of moist red-velvet cake and rich cream cheese frosting. Perfect for any occasion, our box of 4 is sure to satisfy your sweet cravings.",
+    "images": [
+      "/shop-products/red-velvet-box-of-4-1.webp",
+      "/shop-products/red-velvet-box-of-4-2.webp",
+      "/shop-products/red-velvet-box-of-4-3.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Valentines Brownie Box",
+    "handle": "valentines-brownie-box",
+    "price": 22.0,
+    "maxPrice": 22.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge your loved one’s sweet tooth this Valentine’s Day with our delightful Valentine's Brownie Box! Each box is filled with rich, fudgy brownies baked to perfection and adorned with Valentines decorations. Available in a variety of flavors, these treats are sure to make hearts melt. Perfect for sharing or as a sweet surprise, our Valentine’s Brownie Box is the ultimate gift for anyone who loves a little chocolatey romance. Order now and spread the love this February 14th!",
+    "images": [
+      "/shop-products/valentines-brownie-box-supplied.webp",
+      "/shop-products/valentines-brownie-box-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Valentines Cake",
+    "handle": "valentines-cake",
+    "price": 18.0,
+    "maxPrice": 18.0,
+    "category": "Celebration cakes",
+    "kind": "cake",
+    "description": "Indulge in our exquisite Valentine's Day Cake, a perfect blend of rich chocolate and velvety vanilla layers, delicately frosted with luscious strawberry buttercream. Adorned with handcrafted heart-shaped decorations and a sprinkle of edible glitter, this cake is not just a treat but a romantic statement. Ideal for sharing with your loved one, it’s the sweetest way to celebrate love this Valentine’s Day. Order now to make your celebration unforgettable!",
+    "images": [
+      "/shop-products/valentines-cake-1.webp"
+    ],
+    "variantOptions": [
+      "Chocolate",
+      "Vanilla",
+      "Red-Velvet",
+      "Funfetti"
+    ],
+    "collections": [
+      "all",
+      "bespoke-cake"
+    ]
+  },
+  {
+    "name": "Valentines Cupcake Box",
+    "handle": "valentines-cupcake-box",
+    "price": 30.0,
+    "maxPrice": 30.0,
+    "category": "Cupcakes & tray bakes",
+    "kind": "bake",
+    "description": "Indulge in love this Valentine's Day with our exquisite Valentine's Cupcake Box! Each beautifully crafted box contains an assortment of delicious, hand-decorated cupcakes in romantic flavors, perfect for sharing with that special someone or treating yourself. From rich chocolate ganache to strawberry swirl, each cupcake is made with premium ingredients and adorned with charming Valentine's-themed decorations. Delight your taste buds and express your love in the sweetest way possible—order your Valentine’s Cupcake Box today and make this holiday unforgettable!",
+    "images": [
+      "/shop-products/valentines-cupcake-box-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Vanilla Cake Mix",
+    "handle": "vanilla-cake-mix",
+    "price": 9.0,
+    "maxPrice": 9.0,
+    "category": "Cupcakes & tray bakes",
+    "kind": "bake",
+    "description": "Vanilla cake mix is a pre-prepared blend of dry ingredients designed to make the process of baking a vanilla-flavoured cake quick and easy. To prepare a cake using vanilla cake mix, you just need to add eggs, oil , and water. The cake can be made in various forms, such as round layers, sheet cakes, or cupcakes, and offers a light, fluffy texture with a deliciously sweet, subtle vanilla flavour. It's a versatile base for various frostings and fillings, making it a popular choice for birthdays, celebrations, and everyday treats. Decorate it with frosting, fresh fruits, or sprinkles to customise it for any occasion!",
+    "images": [
+      "/shop-products/vanilla-cake-mix-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Vanilla Oreo Cake Box Of 4",
+    "handle": "vanilla-oreo-cake-box-of-4",
+    "price": 22.0,
+    "maxPrice": 22.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in the perfect blend of creamy vanilla and crunchy Oreo in this delectable box of 4 cakes. Satisfy your cravings with each bite and experience the ultimate flavor explosion. Made with high-quality ingredients, these cakes are a must-have for any dessert lover.",
+    "images": [
+      "/shop-products/vanilla-oreo-cake-box-of-4-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Vanilla Oreo Cake Box Of 6",
+    "handle": "vanilla-oreo-cake-box-of-6",
+    "price": 32.0,
+    "maxPrice": 32.0,
+    "category": "Cookies & brownies",
+    "kind": "brownie",
+    "description": "Indulge in the perfect combination of rich vanilla and chocolatey Oreo cookies with our Vanilla Oreo Cake Box Of 6. Made with high-quality ingredients, each bite is a delicious treat for your taste buds. Enjoy a box of 6 cakes, perfect for sharing with friends and family.",
+    "images": [
+      "/shop-products/vanilla-oreo-cake-box-of-6-1.webp",
+      "/shop-products/vanilla-oreo-cake-box-of-6-2.webp",
+      "/shop-products/vanilla-oreo-cake-box-of-6-3.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Victoria Sponge Cake Box Of 4",
+    "handle": "victoria-sponge-cake-box-of-4",
+    "price": 24.0,
+    "maxPrice": 24.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in a classic treat with our Victoria Sponge Cake Box of 4. Made with light and fluffy sponge cake, layered with sweet jam and velvety buttercream, each bite is a perfect balance of flavours. Perfect for sharing or enjoying on your own, these cakes are sure to satisfy your cravings. Think birthdays, wedding, childrens parties! Please note whole cake orders will be priced differently. MOQ 40 slices for wholesale orders.",
+    "images": [
+      "/shop-products/victoria-sponge-cake-box-of-4-1.webp",
+      "/shop-products/victoria-sponge-cake-box-of-4-2.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Victoria Sponge Cake Box Of 6",
+    "handle": "victoria-sponge-cake-box-of-6",
+    "price": 32.0,
+    "maxPrice": 32.0,
+    "category": "Cake boxes",
+    "kind": "box",
+    "description": "Indulge in the classic taste of a Victoria Sponge Cake with our convenient box of 6. Made with high-quality ingredients, each cake offers a perfect balance of fluffy sponge and rich cream filling. Perfect for sharing with friends and family or treating yourself to a delicious afternoon snack.",
+    "images": [
+      "/shop-products/victoria-sponge-cake-box-of-6-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all"
+    ]
+  },
+  {
+    "name": "Whole Rainbow Cake",
+    "handle": "whole-rainbow-cake",
+    "price": 100.0,
+    "maxPrice": 100.0,
+    "category": "Celebration cakes",
+    "kind": "cake",
+    "description": "Indulge in our Whole Rainbow Cake, a vibrant and delicious treat that adds a splash of colour to any celebration! This stunning multi-layer cake features six colourful, moist layers, each infused with delightful vanilla flavour and frosted with a creamy buttercream. Perfect for birthdays, weddings, or any festive occasion, our Rainbow Cake is as beautiful as it is delicious. Celebrate with a slice of joy! The Perfect cake for your 2026 Pride celebration.",
+    "images": [
+      "/shop-products/whole-rainbow-cake-1.webp"
+    ],
+    "variantOptions": [],
+    "collections": [
+      "all",
+      "bespoke-cake"
+    ]
+  }
+]
