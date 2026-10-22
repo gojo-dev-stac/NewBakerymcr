@@ -68,13 +68,13 @@ export const hero = {
   ],
   // layer meter (1 → 7) by video second
   layers: [1.25, 1.35, 1.9, 2.4, 2.55, 3.4, 6.0],
-  copy: "Bento cakes, celebration cakes, stuffed cookies and brownies from thebakerymcr. Find your favourite, or get in touch about a bespoke cake.",
-  ctas: ["Shop now", "Bespoke cakes"],
+  copy: "Piped bento cakes, celebration cakes, brownies and cookies, baked in Manchester. Choose a favourite or ask about a bespoke cake.",
+  ctas: ["Shop cakes", "Bespoke cakes"],
 };
 
 export const crown = {
   title: ["The House", "Cake"],
-  sub: "Three sponges under warm dark chocolate, poured and dripped by hand, then crowned with macarons, berries and a little gold. Our signature for birthdays, weddings and everything in between.",
+  sub: "A layered cake finished with a pour of dark chocolate, piped drips, macarons, berries and a little gold.",
   tags: [
     { id: "pour", name: "Pour", note: "64% dark chocolate, poured to order", until: 3.2, tone: "pistachio" },
     { id: "drip", name: "Drip", note: "Every drip piped by hand", until: 4.0, tone: "pink" },
@@ -98,8 +98,8 @@ export const counterSmall = [
   { name: "Vanilla Cake Mix", price: "£9" },
 ];
 export const counter = {
-  title: "Out of the oven at seven.",
-  sub: "Pink and purple piped bento cakes, love-heart cakes, brownies and more from thebakerymcr in Manchester.",
+  title: "Find your new favourite.",
+  sub: "Piped cakes, brownie boxes, stuffed cookies and more from thebakerymcr in Manchester.",
 };
 
 /** The shop's collections, as a rail above the counter (supporting marquee inside the counter's motion code). */
@@ -116,20 +116,20 @@ export const collections = [
 
 export const inside = {
   metric: "7",
-  metricLabel: "hours",
-  title: "Inside the box.",
-  copy: "Cut it and count: two sponges, a biscoff crumb, brownie chunks and a fudge centre, cut into four or six and packed the morning it is posted.",
+  metricLabel: "layers",
+  title: "Made layer by layer.",
+  copy: "A closer look at the cake coming together: soft sponge, a ribbon of filling and a generous finish, built one step at a time.",
   figures: [
-    { v: "2", label: "sponges, layered" },
-    { v: "3", label: "fillings" },
-    { v: "4", label: "to a box" },
-    { v: "6", label: "in a box of six" },
+    { v: "3", label: "bespoke cakes" },
+    { v: "2", label: "tray bake flavours" },
+    { v: "4", label: "treats in a box" },
+    { v: "6", label: "treats in a box" },
   ],
 };
 
 export const builder = {
   title: "Build your cake.",
-  sub: "Bento, heart or square. Four choices, piped the morning you collect — from £40.",
+  sub: "Choose a shape, sponge, finish and size. Cake options start at £40.",
   steps: [
     { id: "shape", name: "Shape", options: ["Round", "Heart", "Square"], add: [0, 15, 10] },
     { id: "sponge", name: "Sponge", options: ["Vanilla", "Chocolate", "Red Velvet"], add: [0, 0, 5] },
@@ -147,44 +147,32 @@ export const builder = {
 };
 
 export const boxed = {
-  title: "Boxed by four.",
-  sub: "Boxed the morning it is baked. Collect from the counter in Manchester, or have it posted UK-wide every Thursday.",
+  title: "A little box of joy.",
+  sub: "Choose a box for collection or postal delivery. The bakery can confirm availability and timing when you order.",
   features: [
-    { name: "Same-day Manchester", note: "Order before 11, collect from 3" },
-    { name: "Posted every Thursday", note: "Tracked, in a sturdy box" },
-    { name: "Wholesale available", note: "Cafés, offices, events" },
-    { name: "Vegan & gluten free", note: "On request, same price" },
+    { name: "Collection", note: "From the Manchester bakery" },
+    { name: "Postal delivery", note: "Ask about current availability" },
+    { name: "Boxes of four", note: "A mix of bakery favourites" },
+    { name: "Boxes of six", note: "Made for sharing" },
   ],
-  cta: "Order a box",
-};
-
-export const orders = {
-  title: "Just ordered.",
-  today: 186,
-  rows: [
-    { name: "Amara", what: "Pink Bento Cake, vanilla", quote: "for mum's birthday", when: "now" },
-    { name: "Josh", what: "Brownie Box of 6", quote: "the biscoff ones!!", when: "1 min" },
-    { name: "Priya", what: "Vintage Heart Cake, 8 inch", quote: "she said yes", when: "3 min" },
-    { name: "Tom", what: "Mixed Cookie Box", quote: "posted to Leeds", when: "4 min" },
-    { name: "Elle", what: "Chocolate Drip Cake", quote: "same day, please", when: "6 min" },
-  ],
+  cta: "Browse all treats",
 };
 
 /** Bespoke + wholesale + careers (the shop's order form, rebuilt as a printed order slip). */
 export const bespoke = {
   eyebrow: "Bespoke & wholesale",
-  title: "Order your bespoke cake.",
-  copy: "A birthday, a wedding, a graduation — or just a reason. Tell us the flavour, the size and the colours, and we'll come back with a sketch and a price within a day.",
-  note: "Order 48 hours ahead for bespoke. Same-day cakes in Manchester, posted boxes UK-wide, and wholesale for cafés, offices and events.",
+  title: "A cake made for your moment.",
+  copy: "Share the occasion, flavour ideas and colours. The bakery can confirm a design, price and lead time for your bespoke cake.",
+  note: "Get in touch to check availability for bespoke cakes, collection, postal boxes or wholesale.",
   form: { name: "Name", email: "Email", phone: "Phone", comment: "What are you celebrating?" },
   sent: "Noted. We'll be in touch today.",
   wholesale: {
-    title: "Wholesale",
-    copy: "Standing orders for cafés, offices and events, from £60 a week. Ask us about our wholesale cakes.",
+    title: "For cafés and events",
+    copy: "Ask the bakery about wholesale cakes for cafés, offices and events.",
   },
   careers: {
-    title: "Think you've got what it takes to be a baker?",
-    copy: "We're always looking for good hands. Send a note and a photo of something you baked.",
+    title: "Love to bake?",
+    copy: "Get in touch with the bakery to ask about opportunities.",
     cta: "Say hello",
   },
 };
@@ -197,7 +185,7 @@ export const visit = {
 
 export const announce = {
   left: "thebakerymcr · Manchester",
-  centre: "Manchester's best cakes",
+  centre: "Baked in Manchester",
   right: "Same-day cakes · Bespoke orders",
 };
 

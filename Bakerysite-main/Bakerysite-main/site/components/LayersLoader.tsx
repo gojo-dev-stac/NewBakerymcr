@@ -111,8 +111,8 @@ export default function LayersLoader() {
             <p className="font-display ld-count w-[3.2ch] text-left text-[34px] leading-none tabular-nums text-[color:var(--choc)]" />
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/Mcr_products/Logo.svg" alt="thebakerymcr" className="mt-7 w-[clamp(140px,18vw,220px)]" />
-          <p className="ld-sub mt-2 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#765e6b]">Manchester</p>
+          <img src="/Mcr_products/Logo.svg" alt="thebakerymcr" className="ld-logo mt-7 w-[clamp(140px,18vw,220px)]" />
+          <p className="ld-sub mt-2 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#765e6b]">Thebakerymcr</p>
         </div>
       </div>
       {/* the chocolate drip curtain (slides down, pulls away) */}

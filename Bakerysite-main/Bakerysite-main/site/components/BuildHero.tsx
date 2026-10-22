@@ -167,7 +167,7 @@ export default function BuildHero() {
         <div id="top" className="absolute top-0" />
         <div className="container-x relative z-[2] flex h-full flex-col max-md:justify-end max-md:pb-[4svh]">
           <div className="hero-copy grid grid-cols-[1.45fr_0.85fr] items-start gap-8 pt-[clamp(138px,17vh,190px)] max-md:grid-cols-1 max-md:gap-4 max-md:pt-0">
-            <h1 className="font-display text-[clamp(44px,6.1vw,104px)] max-md:text-[44px]">
+            <h1 className="hero-title font-display text-[clamp(44px,6.1vw,104px)] max-md:text-[44px]">
               <span className="block overflow-hidden pb-[0.06em]">
               <span className="hero-line inline-block whitespace-nowrap">
               {hero.lead}{" "}
@@ -196,15 +196,15 @@ export default function BuildHero() {
                   <path className="hero-scroll-line" d="M9 1v27" />
                   <path className="hero-scroll-arrow" d="m3 23 6 6 6-6" />
                 </svg>
-                <span>Scroll Down to see the layers</span>
+                <span>Scroll to see the layers</span>
               </p>
             </div>
-            <div className="hero-scroll-cue max-lg:hidden" aria-label="Scroll Down to see the layers">
+            <div className="hero-scroll-cue max-lg:hidden" aria-label="Scroll to see the layers">
               <svg viewBox="0 0 18 38" aria-hidden="true">
                 <path className="hero-scroll-line" d="M9 1v27" />
                 <path className="hero-scroll-arrow" d="m3 23 6 6 6-6" />
               </svg>
-              <span>Scroll Down to see the layers</span>
+              <span>Scroll to see the layers</span>
             </div>
           </div>
           <div className="hero-meta mt-auto flex items-end justify-between pb-[4.5vh] max-md:hidden">
@@ -218,7 +218,7 @@ export default function BuildHero() {
                 Layer <span className="meter-n tabular-nums">7</span> / 7
               </p>
             </div>
-            <p className="label text-muted">Vanilla sponge · Strawberry jam · Whipped cream · Baked at five</p>
+            <p className="label text-muted">Sponge · jam · cream · finished by hand</p>
           </div>
         </div>
       </div>

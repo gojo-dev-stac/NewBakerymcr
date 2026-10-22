@@ -99,7 +99,7 @@ export default function InsideSlice() {
         </div>
         <dl className="inside-figs mt-auto grid grid-cols-4 border-t-[1.5px] border-[var(--choc)] max-md:mt-4 max-md:grid-cols-2">
           {inside.figures.map((f, i) => (
-            <div key={f.label} className={`pt-4 max-md:pt-2 ${i ? "border-l-[1.5px] border-[var(--choc)] pl-5 max-md:pl-3" : ""} max-md:[&:nth-child(3)]:border-l-0 max-md:[&:nth-child(3)]:pl-0`}>
+            <div key={`${i}-${f.label}`} className={`pt-4 max-md:pt-2 ${i ? "border-l-[1.5px] border-[var(--choc)] pl-5 max-md:pl-3" : ""} max-md:[&:nth-child(3)]:border-l-0 max-md:[&:nth-child(3)]:pl-0`}>
               <dt className="sr-only">{f.label}</dt>
               <dd className="font-display fig-v text-[clamp(44px,4.6vw,76px)] leading-none max-md:text-[40px]" aria-label={f.v}>
                 {/* the final digit sits in flow (static / no-JS); the rolling column covers it */}

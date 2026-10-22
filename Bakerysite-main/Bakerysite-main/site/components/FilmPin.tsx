@@ -9,7 +9,7 @@ import { filmPinVh, filmStops, filmTimeAt, useFilm, type Film, type FilmPlayer, 
  * A pinned scroll video: the section is 100svh + the film's pin length; the stage sticks while the scroll plays the
  * video by its segments (video time, not frames). Record mode: the section top is a stop (`arrive` seconds), then one
  * invisible stop at the end of every segment, so each part of the video gets exactly its planned seconds.
- * ?static=1: no pin, the stage shows the film's poster second (its final picture).
+ * Reduced motion or ?static=1: the stage shows the film's poster second (its final picture).
  * Overlays are children; `onTime(videoSecond, progress)` runs on every scroll update (and once with the poster).
  */
 export default function FilmPin({

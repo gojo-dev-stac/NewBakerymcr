@@ -15,7 +15,7 @@ declare global {
 export default function SmoothScroll() {
   useEffect(() => {
     if (prefersReducedMotion()) {
-      document.documentElement.classList.add("is-static"); // ?static=1: CSS loops stop too (html.is-static rules)
+      document.documentElement.classList.add("is-static"); // Reduced motion and ?static=1 also stop CSS loops.
       return;
     }
 

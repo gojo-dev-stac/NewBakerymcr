@@ -38,7 +38,7 @@ export default function BoxedFilm() {
       start: "top 92%",
       onEnter: () => gsap.fromTo("#build .build-diagram", { scale: 1 }, { scale: 1.05, duration: 0.22, yoyo: true, repeat: 1, ease: "power2.out" }),
     });
-    // X1 out: the order feed slides up over the pinned box (its tail), which dims and sinks a little
+    // X1 out: the featured treats slide over the pinned box, which dims and sinks a little
     const dim = gsap.fromTo(stage, { filter: "brightness(1)", scale: 1 }, { filter: "brightness(0.62)", scale: 0.97, ease: "none", scrollTrigger: { trigger: "#orders", start: "top bottom", end: "top top", scrub: true } });
     return () => {
       [cover, dim].forEach((t) => {

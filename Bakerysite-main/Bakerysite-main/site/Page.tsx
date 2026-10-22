@@ -31,7 +31,7 @@ export default function Page() {
       <SiteMotion />
       <BakeryDetails />
       <ClassicHeader />
-      <main className="relative overflow-x-clip">
+      <main className="home-page relative overflow-x-clip">
         <BuildHero />
         <TheCrown />
         <CakeCounter />

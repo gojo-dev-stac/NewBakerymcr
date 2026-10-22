@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
+import { prefersReducedMotion } from "@/lib/gsap";
 
-/** Adds html.is-static for ?static=1 (after hydration, so React never sees a changed <html>). */
+/** Adds html.is-static when motion is disabled (after hydration, so React never sees a changed <html>). */
 export default function SiteFlags() {
   useEffect(() => {
-    if (new URLSearchParams(window.location.search).has("static")) document.documentElement.classList.add("is-static");
+    if (prefersReducedMotion()) document.documentElement.classList.add("is-static");
   }, []);
   return null;
 }

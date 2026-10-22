@@ -64,12 +64,14 @@ export default function ClassicHeader() {
     if (prefersReducedMotion()) return;
     const el = head.current!;
     const rules = el.querySelectorAll<HTMLElement>("[data-draw]");
+    const ornament = el.querySelector<HTMLElement>(".hf-orn");
     gsap.set(rules, { scaleX: 0 });
     gsap.set(el.querySelectorAll(".hf-in"), { opacity: 0, y: 10 });
-    gsap.set(el.querySelector(".hf-orn"), { scaleX: 0, opacity: 0 });
+    if (ornament) gsap.set(ornament, { scaleX: 0, opacity: 0 });
     return onReveal(() => {
       gsap.to(rules, { scaleX: 1, duration: 1.1, ease: "expo.inOut", stagger: 0.1, delay: 0.15 });
-      gsap.to(el.querySelector(".hf-orn"), { scaleX: 1, opacity: 1, duration: 0.7, ease: "power3.out", delay: 0.45 });
+      if (ornament)
+        gsap.to(ornament, { scaleX: 1, opacity: 1, duration: 0.7, ease: "power3.out", delay: 0.45 });
       gsap.to(el.querySelectorAll(".hf-in"), { opacity: 1, y: 0, duration: 0.75, ease: "power3.out", stagger: 0.05, delay: 0.35 });
     });
   }, []);

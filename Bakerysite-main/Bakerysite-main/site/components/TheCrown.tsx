@@ -169,7 +169,7 @@ export default function TheCrown() {
         <div className="container-x relative z-[2] flex h-full flex-col justify-center max-md:justify-end max-md:pb-[4svh]">
           <div className="crown-copy relative top-[24px] w-[min(28vw,400px)] max-md:top-0 max-md:w-full">
             <h2 className="font-display text-[clamp(52px,6.2vw,104px)] max-md:text-[48px]">
-              {crown.title[0]} <span className="text-[color:var(--straw)]">{crown.title[1]}</span>
+              {crown.title[0]} {crown.title[1]}
             </h2>
             <p className="mt-4 max-w-[36ch] text-[15px] leading-[1.55] text-muted max-md:mt-2 max-md:text-[14px]">{crown.sub}</p>
             <ol className="mt-7 grid gap-2 max-md:mt-4 max-md:grid-cols-3">
