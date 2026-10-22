@@ -541,6 +541,7 @@ html.is-static .hero-scroll-arrow {
   min-width: 0;
   border: 1px solid rgba(51, 37, 44, 0.5);
   background: var(--paper);
+  overflow: hidden;
 }
 .home-pick-photo {
   position: relative;
@@ -558,10 +559,12 @@ html.is-static .hero-scroll-arrow {
   transform: scale(1.035);
 }
 .home-pick-info {
+  min-width: 0;
   padding: clamp(14px, 2vw, 22px);
   border-top: 1px dashed rgba(51, 37, 44, 0.36);
 }
 .home-pick-title {
+  min-width: 0;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -569,8 +572,10 @@ html.is-static .hero-scroll-arrow {
   margin-top: 9px;
 }
 .home-pick-title h3 {
+  min-width: 0;
   font-size: clamp(20px, 2vw, 28px);
   line-height: 1.05;
+  overflow-wrap: anywhere;
 }
 .home-pick-title > span {
   flex: 0 0 auto;
@@ -593,6 +598,12 @@ html.is-static .hero-scroll-arrow {
 }
 .home-pick-foot a {
   font-size: 13px;
+}
+.home-pick-detail {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
 }
 .home-pick-photo:focus-visible,
 .home-pick-foot a:focus-visible {
@@ -943,8 +954,9 @@ html.is-static .hero-scroll-arrow {
     margin-bottom: 22px;
   }
   .home-picks-heading h2 {
-    max-width: 11ch;
-    font-size: clamp(42px, 10vw, 62px);
+    max-width: 12ch;
+    font-size: clamp(36px, 9.5vw, 50px);
+    line-height: 0.98;
   }
   .home-picks-intro {
     max-width: 38ch;
@@ -981,6 +993,12 @@ html.is-static .hero-scroll-arrow {
   }
   .home-pick-title h3 {
     font-size: 20px;
+  }
+  .home-pick-title > span {
+    font-size: 11px;
+  }
+  .home-pick-detail {
+    font-size: 12px;
   }
   .home-pick-foot {
     margin-top: 12px;

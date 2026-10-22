@@ -194,7 +194,7 @@ export const nav = {
     { label: "Home", href: "#top" },
     { label: "Shop", href: "#counter" },
     { label: "Cakes", href: "#crown" },
-    { label: "Collection & postal", href: "#boxed" },
+    { label: "Collection & postal", href: "/collections/all" },
     { label: "Bespoke", href: "#bespoke" },
   ],
   modes: ["Collection", "Postal"],

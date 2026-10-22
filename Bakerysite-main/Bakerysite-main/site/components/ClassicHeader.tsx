@@ -100,7 +100,7 @@ export default function ClassicHeader() {
           <nav aria-label="Main" className="flex items-center gap-6 max-lg:hidden">
           {nav.links.map((l, i) => {
             const href =
-              l.label === "Shop"
+              l.label === "Shop" || l.label === "Collection & postal"
                 ? "/collections/all"
                 : pathname.startsWith("/collections/")
                   ? `/${l.href}`

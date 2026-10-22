@@ -5,9 +5,7 @@ import ClassicHeader from "./components/ClassicHeader";
 import BuildHero from "./components/BuildHero";
 import TheCrown from "./components/TheCrown";
 import CakeCounter from "./components/CakeCounter";
-import InsideSlice from "./components/InsideSlice";
 import BuildYourOwn from "./components/BuildYourOwn";
-import BoxedFilm from "./components/BoxedFilm";
 import Bespoke from "./components/Bespoke";
 import JustOrdered from "./components/JustOrdered";
 import VisitFooter from "./components/VisitFooter";
@@ -35,9 +33,9 @@ export default function Page() {
         <BuildHero />
         <TheCrown />
         <CakeCounter />
-        <InsideSlice />
+        {/* Temporarily disabled: the 7-layer film while mobile performance is improved. */}
         <BuildYourOwn />
-        <BoxedFilm />
+        {/* Temporarily disabled: the collection-box film while mobile performance is improved. */}
         <JustOrdered />
         <Bespoke />
       </main>

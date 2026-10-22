@@ -5,7 +5,13 @@ import { gbp } from "../content";
 const featuredPicks = [
   { handle: "8-inch-pink-heart-cake", label: "For the celebration", collection: "Bespoke cakes" },
   { handle: "bisoff-brownie-box-of-6", label: "For the chocolate fans", collection: "Brownies" },
-  { handle: "biscoff-tray-bake-copy", label: "A little afternoon treat", collection: "Tray bakes" },
+  {
+    handle: "biscoff-tray-bake-copy",
+    label: "A little afternoon treat",
+    collection: "Tray bakes",
+    title: "Old School Tray Bake",
+    detail: "Vanilla sponge with icing & sprinkles",
+  },
 ];
 
 export default function JustOrdered() {
@@ -38,7 +44,7 @@ export default function JustOrdered() {
         </div>
 
         <div className="home-picks-grid">
-          {picks.map(({ handle, label, collection, product }) => (
+          {picks.map(({ handle, label, collection, product, title, detail }) => (
             <article className="home-pick" key={handle}>
               <a
                 className="home-pick-photo"
@@ -55,9 +61,10 @@ export default function JustOrdered() {
               <div className="home-pick-info">
                 <p className="label text-muted">{label}</p>
                 <div className="home-pick-title">
-                  <h3 className="font-display">{product.name}</h3>
+                  <h3 className="font-display">{title ?? product.name}</h3>
                   <span>{collection}</span>
                 </div>
+                {detail && <p className="home-pick-detail">{detail}</p>}
                 <div className="home-pick-foot">
                   <span className="font-display">
                     {product.price === product.maxPrice ? gbp(product.price) : `From ${gbp(product.price)}`}
