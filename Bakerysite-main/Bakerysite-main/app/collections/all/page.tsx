@@ -1,0 +1,34 @@
+import type { Metadata } from "next";
+import Animations from "@/components/engine/Animations";
+import Cursor from "@/components/engine/Cursor";
+import RecordMode from "@/components/engine/RecordMode";
+import SmoothScroll from "@/components/engine/SmoothScroll";
+import { meta } from "@/site/site";
+import ClassicHeader from "@/site/components/ClassicHeader";
+import HoldPush from "@/site/components/HoldPush";
+import LayersLoader from "@/site/components/LayersLoader";
+import ShopCollection from "@/site/components/ShopCollection";
+import SiteFlags from "@/site/components/SiteFlags";
+import VisitFooter from "@/site/components/VisitFooter";
+
+export const metadata: Metadata = {
+  title: `Shop all | ${meta.name}`,
+  description: "Browse cakes, box bakes, brownies and more from The Bakery MCR.",
+};
+
+export default function ShopPage() {
+  return (
+    <>
+      <SiteFlags />
+      <LayersLoader />
+      <SmoothScroll />
+      <Animations />
+      <HoldPush />
+      <RecordMode speed={meta.record?.speed} duration={meta.record?.duration} delay={meta.record?.delay} />
+      <Cursor />
+      <ClassicHeader />
+      <ShopCollection />
+      <VisitFooter />
+    </>
+  );
+}

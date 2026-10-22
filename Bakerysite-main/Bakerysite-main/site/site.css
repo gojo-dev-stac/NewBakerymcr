@@ -1,0 +1,1546 @@
+/* Crumb & Co: L20 storybook geometry, daylight pâtisserie. Square pastel blocks, stepped edges (S10), ticket cards (C9).
+   Tokens: cream page (measured film backdrop), chocolate ink, strawberry accent, pistachio + strawberry-milk blocks. */
+:root {
+  --cream: #f5ede2;
+  --blush: #e9cec7; /* the films' backdrop on the right */
+  --pist: #cfe0b4;
+  --pink: #f7cdd3;
+  --choc: #3b2418;
+  --straw: #b8304c;
+  --paper: #fffaf3;
+  --film-bg: linear-gradient(90deg, #f5ede2 0%, #f3e6dc 46%, #ead1ca 100%);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-wipe: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+body.grain::after,
+.grain::after {
+  opacity: 0.035;
+}
+
+.font-display {
+  font-weight: 760;
+  font-stretch: 86%;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* small caps labels (not an eyebrow above every heading: used for meta lines, tags, prices) */
+.label {
+  font-family: var(--font-body-family), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- buttons: square, strawberry fill wipe ---------- */
+.btn {
+  border-radius: 0;
+  padding: 0.95rem 1.5rem;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  font-weight: 650;
+}
+.btn-solid {
+  background: var(--straw);
+  color: var(--paper);
+}
+.btn-ink {
+  border: 1.5px solid var(--choc);
+  color: var(--choc);
+}
+.btn-ink::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--choc);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s var(--ease-wipe);
+}
+.btn-ink:hover {
+  color: var(--paper);
+}
+.btn-ink:hover::before {
+  transform: scaleX(1);
+}
+
+/* ---------- stages ---------- */
+.film-bg {
+  background: var(--film-bg);
+}
+.pin-outer {
+  position: relative;
+}
+.pin-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+
+/* ---------- S10 stepped edge: three steps like cake tiers, sits on top of a section, in the section's colour ---------- */
+.step-edge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(var(--step-h, 72px) * -1 + 1px);
+  height: var(--step-h, 72px);
+  background: var(--step-c, var(--cream));
+  clip-path: polygon(0 100%, 0 66.6%, var(--s1, 34%) 66.6%, var(--s1, 34%) 33.3%, var(--s2, 67%) 33.3%, var(--s2, 67%) 0, 100% 0, 100% 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+.step-edge.flip {
+  transform: scaleX(-1);
+}
+@media (max-width: 767px) {
+  .step-edge {
+    --step-h: 42px;
+  }
+}
+
+/* component styles live in Tailwind's components layer, so utility classes on the element can still override them */
+@layer components {
+/* ---------- C9 ticket card: square pastel block + perforated stub ---------- */
+.tone-pink {
+  background: var(--pink);
+}
+.tone-pistachio {
+  background: var(--pist);
+}
+.tone-cream {
+  background: var(--paper);
+}
+.tone-blush {
+  background: #f1dcd2;
+}
+.ticket {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--choc);
+}
+.ticket-stub {
+  position: relative;
+  margin-top: auto;
+  border-top: 2px dashed rgba(59, 36, 24, 0.35);
+  background: inherit;
+}
+/* the two notches of a tear-off line */
+.ticket-stub::before,
+.ticket-stub::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--notch, var(--cream));
+}
+.ticket-stub::before {
+  left: -8px;
+}
+.ticket-stub::after {
+  right: -8px;
+}
+.ticket-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  height: 34px;
+  padding-inline: 14px;
+  background: var(--choc);
+  color: var(--paper);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.ticket-add:hover {
+  background: var(--straw);
+}
+
+/* ---------- classic header: announcement bar, hairlines, centred wordmark ---------- */
+.classic-head {
+  --head-h: 88px;
+}
+@media (max-width: 1023px) {
+  .classic-head {
+    --head-h: 64px;
+  }
+}
+.announce {
+  height: 34px;
+  overflow: hidden;
+  background: var(--choc);
+  color: var(--paper);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  transition: height 0.45s var(--ease-wipe), opacity 0.3s ease;
+}
+.announce > .container-x {
+  height: 34px;
+}
+.announce a:hover {
+  color: var(--pink);
+}
+.announce-arrow {
+  transition: transform 0.4s var(--ease-out);
+}
+.announce a:hover .announce-arrow {
+  transform: translateX(4px);
+}
+.classic-head.is-scrolled .announce {
+  height: 0;
+  opacity: 0;
+}
+.head-bar {
+  position: relative;
+  height: var(--head-h);
+  background: rgba(245, 237, 226, 0.93);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  transition: height 0.4s var(--ease-wipe), background 0.3s ease;
+}
+.classic-head.is-scrolled .head-bar {
+  height: 64px;
+  background: rgba(245, 237, 226, 0.98);
+}
+.head-rule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--choc);
+  opacity: 0.45;
+  transform-origin: left center;
+  pointer-events: none;
+}
+.head-rule.top {
+  top: 0;
+}
+.head-rule.bottom {
+  bottom: 0;
+}
+/* wordmark: THE BAKERY over MANCHESTER, an ornament above, rules either side */
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  padding: 8px 0;
+  color: var(--choc);
+}
+.word-orn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 96px;
+  margin-bottom: 7px;
+  transition: opacity 0.3s ease, height 0.3s ease, margin 0.3s ease;
+}
+.orn-line {
+  flex: 1;
+  height: 1px;
+  background: var(--straw);
+}
+.orn-diamond {
+  width: 5px;
+  height: 5px;
+  background: var(--straw);
+  transform: rotate(45deg);
+}
+.word-main {
+  font-family: var(--font-display-family), sans-serif;
+  font-size: 27px;
+  font-weight: 820;
+  font-stretch: 84%;
+  letter-spacing: 0.17em;
+  text-indent: 0.17em;
+  text-transform: uppercase;
+  transition: font-size 0.35s var(--ease-out);
+}
+.word-sub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-indent: 0.4em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.word-rule {
+  width: 20px;
+  height: 1px;
+  background: var(--line);
+}
+.classic-head.is-scrolled .word-main {
+  font-size: 22px;
+}
+.classic-head.is-scrolled .word-orn {
+  height: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .word-main {
+    font-size: 22px;
+  }
+  .word-sub {
+    font-size: 8px;
+    margin-top: 4px;
+  }
+  .word-orn {
+    width: 64px;
+    margin-bottom: 4px;
+  }
+  .classic-head.is-scrolled .word-orn {
+    display: none;
+  }
+}
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--choc);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.45s var(--ease-out);
+}
+.nav-link:hover::after,
+.nav-link.is-here::after {
+  transform: scaleX(1);
+}
+.nav-link.is-here::after {
+  background: var(--straw);
+}
+.nav-burger {
+  gap: 10px;
+  padding: 8px 0;
+  color: var(--choc);
+}
+.burger-lines {
+  display: grid;
+  gap: 5px;
+  width: 20px;
+}
+.burger-lines span {
+  display: block;
+  height: 1px;
+  background: var(--choc);
+  transition: transform 0.35s var(--ease-out);
+}
+.nav-burger[aria-expanded="true"] .burger-lines span:first-child {
+  transform: translateY(3px) rotate(12deg);
+}
+.nav-burger[aria-expanded="true"] .burger-lines span:last-child {
+  transform: translateY(-3px) rotate(-12deg);
+}
+.order-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.pill-count {
+  font-variant-numeric: tabular-nums;
+}
+/* phone menu sheet: the counter sign flips down */
+.menu-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* under the header bar, so the wordmark and Menu/Close stay usable */
+  visibility: hidden;
+  opacity: 0;
+  background: var(--bg);
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+.menu-sheet.is-open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0s;
+}
+.menu-link {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-display-family), sans-serif;
+  font-size: clamp(30px, 8vw, 42px);
+  font-weight: 780;
+  font-stretch: 86%;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+}
+.menu-sheet.is-open .menu-link {
+  opacity: 1;
+  transform: none;
+}
+.menu-no {
+  font-family: var(--font-body-family), sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+@media (min-width: 1024px) {
+  .menu-sheet {
+    display: none;
+  }
+}
+
+}
+
+@layer components {
+.hero-scroll-cue {
+  position: absolute;
+  z-index: 3;
+  top: 53%;
+  left: max(24px, calc((100vw - 1280px) / 2));
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.hero-scroll-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+.hero-scroll-cue svg,
+.hero-scroll-note svg {
+  width: 16px;
+  height: 34px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+.hero-scroll-line {
+  opacity: 0.48;
+}
+.hero-scroll-arrow {
+  animation: hero-scroll-arrow 1.15s ease-in-out infinite;
+}
+@keyframes hero-scroll-arrow {
+  0%,
+  100% {
+    transform: translateY(-2px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+}
+html.is-static .hero-scroll-arrow {
+  animation: none;
+}
+
+.shop-page {
+  padding-top: 132px;
+  background: var(--cream);
+}
+.shop-intro {
+  padding-bottom: clamp(32px, 5vw, 64px);
+}
+.shop-intro-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+  align-items: end;
+  gap: clamp(24px, 5vw, 80px);
+  margin-top: 14px;
+}
+.shop-intro h1 {
+  max-width: 11ch;
+  font-size: clamp(48px, 7vw, 106px);
+  line-height: 0.91;
+}
+.shop-intro-row > p {
+  max-width: 38ch;
+  padding-bottom: 5px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.shop-count {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: clamp(28px, 4vw, 48px);
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.shop-count > span {
+  font-weight: 650;
+}
+.shop-listing {
+  padding: 0 0 clamp(72px, 10vw, 128px);
+  background: var(--pist);
+}
+.shop-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0 14px;
+  border-bottom: 1px solid rgba(59, 36, 24, 0.38);
+}
+.shop-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.shop-filter {
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid rgba(59, 36, 24, 0.48);
+  color: var(--choc);
+  font-size: 12px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.shop-filter:hover,
+.shop-filter.is-active {
+  background: var(--choc);
+  color: var(--paper);
+}
+.shop-filter:focus-visible,
+.shop-sort select:focus-visible,
+.shop-product-buy button:focus-visible {
+  outline: 2px solid var(--straw);
+  outline-offset: 3px;
+}
+.shop-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+  font-size: 12px;
+}
+.shop-sort select {
+  min-height: 38px;
+  padding: 7px 28px 7px 10px;
+  border: 1px solid rgba(59, 36, 24, 0.48);
+  background: var(--cream);
+  color: var(--choc);
+  font: inherit;
+}
+.shop-result-count {
+  padding: 20px 0 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.shop-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.shop-product {
+  min-width: 0;
+  border: 1px solid var(--choc);
+  background: var(--paper);
+}
+.shop-art {
+  position: relative;
+  display: grid;
+  min-height: clamp(150px, 17vw, 240px);
+  overflow: hidden;
+  place-items: center;
+  background: var(--pink);
+}
+.shop-art--box,
+.shop-art--bake {
+  background: var(--cream);
+}
+.shop-art--brownie,
+.shop-art--pantry {
+  background: #e9cec7;
+}
+.shop-art--gift {
+  background: var(--choc);
+}
+.shop-art-photo {
+  position: absolute;
+  inset: 8% 10% 5%;
+  width: 80%;
+  height: 87%;
+  object-fit: contain;
+  filter: drop-shadow(0 9px 8px rgba(59, 36, 24, 0.16));
+  transition: transform 0.45s var(--ease-out);
+}
+.shop-product:hover .shop-art-photo {
+  transform: translateY(-4px) rotate(-2deg);
+}
+.shop-art-object {
+  position: relative;
+  display: block;
+  width: clamp(72px, 8vw, 118px);
+  height: clamp(68px, 7vw, 100px);
+  transform: rotate(-4deg);
+  filter: drop-shadow(0 12px 9px rgba(59, 36, 24, 0.18));
+}
+.shop-art-layer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  border: 1px solid rgba(59, 36, 24, 0.68);
+}
+.shop-art-layer--one {
+  bottom: 0;
+  height: 45%;
+  background: var(--choc);
+}
+.shop-art-layer--two {
+  bottom: 43%;
+  background: var(--pink);
+}
+.shop-art-layer--three {
+  bottom: 70%;
+  height: 12%;
+  background: var(--paper);
+}
+.shop-art--brownie .shop-art-layer--one {
+  height: 54%;
+  background: #5b3326;
+}
+.shop-art--brownie .shop-art-layer--two {
+  bottom: 50%;
+  height: 36%;
+  background: #d7a875;
+}
+.shop-art--brownie .shop-art-layer--three {
+  bottom: 82%;
+  height: 10%;
+  background: var(--choc);
+}
+.shop-art--bake .shop-art-object {
+  border: 1px solid var(--choc);
+  background: linear-gradient(to bottom, var(--pink) 0 17%, var(--paper) 17% 30%, #c68d5f 30% 100%);
+}
+.shop-art--pantry .shop-art-object {
+  width: clamp(58px, 6vw, 84px);
+  height: clamp(82px, 9vw, 122px);
+  border: 1.5px solid var(--choc);
+  background: linear-gradient(to bottom, var(--choc) 0 15%, var(--pist) 15% 78%, var(--pink) 78%);
+}
+.shop-art--gift .shop-art-object {
+  width: clamp(82px, 9vw, 120px);
+  height: clamp(70px, 7vw, 100px);
+  border: 1px solid var(--paper);
+  background: var(--straw);
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 100%, 0 78%);
+}
+.shop-art--gift .shop-art-layer {
+  top: 0;
+  left: 50%;
+  width: 15%;
+  height: 78%;
+  border: 0;
+  background: var(--pist);
+  transform: translateX(-50%);
+}
+.shop-art-spark {
+  position: absolute;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--choc);
+  border-radius: 50%;
+  background: var(--pist);
+}
+.shop-art-spark--one {
+  top: 7%;
+  left: 17%;
+}
+.shop-art-spark--two {
+  top: 1%;
+  right: 13%;
+  width: 6px;
+  height: 6px;
+  background: var(--straw);
+}
+.shop-art-topping {
+  position: absolute;
+  z-index: 2;
+  width: clamp(42px, 5vw, 70px);
+  height: clamp(42px, 5vw, 70px);
+  object-fit: contain;
+  filter: drop-shadow(0 7px 5px rgba(59, 36, 24, 0.14));
+}
+.shop-art-topping--1 {
+  top: 15%;
+  left: 13%;
+  transform: rotate(-14deg);
+}
+.shop-art-topping--2 {
+  right: 12%;
+  bottom: 16%;
+  width: clamp(32px, 3.7vw, 52px);
+  height: clamp(32px, 3.7vw, 52px);
+  transform: rotate(12deg);
+}
+.shop-art-caption {
+  position: absolute;
+  right: 9px;
+  bottom: 8px;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.shop-product-info {
+  padding: 12px 13px 13px;
+  border-top: 1px dashed rgba(59, 36, 24, 0.5);
+}
+.shop-product-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.shop-product-meta > span:last-child {
+  color: var(--straw);
+  font-weight: 700;
+}
+.shop-product h2 {
+  min-height: 2.5em;
+  margin-top: 9px;
+  font-family: var(--font-display-family), sans-serif;
+  font-size: clamp(17px, 1.45vw, 21px);
+  font-weight: 760;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.shop-product-buy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 13px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.shop-product-buy p {
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.shop-product-buy button {
+  min-width: 58px;
+  min-height: 36px;
+  padding: 8px 13px;
+  background: var(--choc);
+  color: var(--paper);
+  font-size: 12px;
+  font-weight: 650;
+  transition: background 0.25s ease;
+}
+.shop-product-buy button:hover {
+  background: var(--straw);
+}
+@media (max-width: 1023px) {
+  .shop-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .shop-page {
+    padding-top: 132px;
+  }
+  .shop-intro-row {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    margin-top: 10px;
+  }
+  .shop-intro h1 {
+    max-width: 9ch;
+    font-size: clamp(48px, 13vw, 68px);
+  }
+  .shop-intro-row > p {
+    max-width: 36ch;
+    font-size: 14px;
+  }
+  .shop-controls {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .shop-filters {
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    padding: 2px 2px 8px;
+    scrollbar-width: thin;
+  }
+  .shop-filter {
+    flex: 0 0 auto;
+  }
+  .shop-sort {
+    align-self: flex-end;
+  }
+  .shop-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+  .shop-art {
+    min-height: clamp(130px, 42vw, 190px);
+  }
+  .shop-product-info {
+    padding: 10px 9px;
+  }
+  .shop-product-meta {
+    font-size: 9px;
+  }
+  .shop-product h2 {
+    min-height: 3em;
+    font-size: 16px;
+  }
+  .shop-product-buy p {
+    font-size: 14px;
+  }
+}
+}
+
+/* ---------- hero ---------- */
+.slot-word {
+  display: inline-grid;
+  color: var(--straw);
+}
+.slot-word > * {
+  grid-area: 1 / 1;
+}
+
+/* LIVE dot (CSS, so it pulses from the first paint) */
+.live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--straw);
+  animation: live 1.6s ease-in-out infinite;
+}
+@keyframes live {
+  50% {
+    box-shadow: 0 0 0 7px rgba(184, 48, 76, 0);
+    transform: scale(0.85);
+  }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(184, 48, 76, 0.35);
+  }
+}
+
+
+/* hero layer meter + crown tags: states driven by video time */
+.meter-cell {
+  transition: opacity 0.25s ease;
+}
+.meter-cell:not(.on) {
+  opacity: 0.2;
+}
+.crown-tag {
+  transition: opacity 0.35s ease, transform 0.45s var(--ease-out);
+}
+.crown-tag:not(.is-on) {
+  opacity: 0.35;
+}
+.crown-tag.is-now {
+  transform: translateX(10px);
+}
+@media (max-width: 767px) {
+  .crown-tag.is-now {
+    transform: translateY(-4px);
+  }
+}
+
+html.is-static .particle-word {
+  visibility: hidden;
+}
+html.is-static .particle-static {
+  display: grid;
+}
+
+@media (max-width: 767px) {
+  .nav-seg {
+    display: none;
+  }
+}
+
+/* typewriter caret in the order feed (blinks only while a row is typing) */
+.caret {
+  display: none;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -2px;
+  background: var(--straw);
+  animation: caret 0.8s steps(1) infinite;
+}
+.order-row.typing .caret {
+  display: inline-block;
+}
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* footer post list */
+.foot-form input {
+  width: 100%;
+  padding: 8px 2px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 250, 243, 0.45);
+  border-radius: 0;
+  color: var(--paper);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.foot-form input::placeholder {
+  color: rgba(255, 250, 243, 0.55);
+}
+.foot-form input:focus {
+  border-color: var(--pink);
+}
+
+/* a slow sheen crosses the chocolate curtain while it covers the screen (never a frozen hand-over) */
+.ld-cdr-sheen {
+  left: -80%;
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 250, 243, 0.16) 50%, transparent 70%);
+  animation: cdr-sheen 1.5s linear infinite;
+}
+@keyframes cdr-sheen {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(370%);
+  }
+}
+
+/* the paper of the order slip catches the light now and then (the slip's ambient life on camera) */
+.slip-sheen {
+  position: absolute;
+  inset: -30% -40%;
+  pointer-events: none;
+  background: linear-gradient(102deg, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 56%);
+  transform: translateX(-75%);
+  animation: slip-sheen 5.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes slip-sheen {
+  0% {
+    transform: translateX(-75%);
+  }
+  58%,
+  100% {
+    transform: translateX(75%);
+  }
+}
+html.is-static .slip-sheen {
+  display: none;
+}
+
+/* bespoke order slip: fields written on the paper, not boxed inputs */
+.slip-field {
+  display: block;
+}
+.slip-field > span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.slip-field input,
+.slip-field textarea {
+  width: 100%;
+  padding: 4px 0 6px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(59, 36, 24, 0.26);
+  border-radius: 0;
+  color: var(--choc);
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+.slip-field input:focus,
+.slip-field textarea:focus {
+  border-color: var(--straw);
+}
+.slip-field input::placeholder,
+.slip-field textarea::placeholder {
+  color: rgba(110, 82, 67, 0.55);
+}
+.slip-stamp {
+  transform: rotate(-8deg);
+  mix-blend-mode: multiply;
+}
+
+/* the till tape under the live feed */
+.live-tape-track {
+  animation: tape 34s linear infinite;
+}
+html.is-static .live-tape-track {
+  animation: none;
+}
+
+/* the printer's tape under the bespoke form */
+.tape {
+  color: var(--choc);
+}
+.tape-track {
+  animation: tape 42s linear infinite;
+}
+@keyframes tape {
+  to {
+    transform: translateX(-50%);
+  }
+}
+html.is-static .tape-track {
+  animation: none;
+}
+
+/* a slow glint runs across the bespoke heading, like light on wet icing (supporting motion) */
+.shine-type {
+  background-image: linear-gradient(100deg, var(--choc) 0%, var(--choc) 43%, #fffaf3 50%, var(--choc) 57%, var(--choc) 100%);
+  background-size: 260% 100%;
+  background-position: 120% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: type-shine 6s linear infinite;
+}
+@keyframes type-shine {
+  0% {
+    background-position: 130% 0;
+  }
+  100% {
+    background-position: -30% 0;
+  }
+}
+html.is-static .shine-type {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--choc);
+}
+
+/* warm daylight drifting through the bespoke section (a shop window, not a screen glare) */
+.bespoke-sweep {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(42% 64% at 50% 46%, rgba(233, 206, 199, 0.55) 0%, rgba(233, 206, 199, 0.25) 40%, rgba(233, 206, 199, 0) 72%);
+  animation: bespoke-sweep 9s ease-in-out infinite alternate;
+}
+@keyframes bespoke-sweep {
+  from {
+    transform: translate3d(-22%, -3%, 0) scale(0.95);
+  }
+  to {
+    transform: translate3d(22%, 3%, 0) scale(1.06);
+  }
+}
+html.is-static .bespoke-sweep {
+  display: none;
+}
+
+/* a soft daylight pool drifting over the live order block (its quiet beats stay alive on camera) */
+.orders-sweep {
+  position: absolute;
+  inset: -15% -25%;
+  pointer-events: none;
+  background: radial-gradient(38% 58% at 50% 50%, rgba(255, 250, 243, 0.5) 0%, rgba(255, 250, 243, 0.18) 46%, rgba(255, 250, 243, 0) 72%);
+  animation: orders-sweep 5.6s ease-in-out infinite alternate;
+}
+@keyframes orders-sweep {
+  from {
+    transform: translateX(-26%);
+  }
+  to {
+    transform: translateX(26%);
+  }
+}
+html.is-static .orders-sweep {
+  display: none;
+}
+
+/* counter collection rail: one full set slides by every 34 s (supporting motion inside the counter) */
+.rail-track {
+  animation: rail 34s linear infinite;
+}
+@keyframes rail {
+  to {
+    transform: translateX(-50%);
+  }
+}
+html.is-static .rail-track {
+  animation: none;
+}
+html.menu-open,
+html.basket-open {
+  overflow: hidden;
+}
+
+/* footer ticker: one full set slides by every 10 s */
+.foot-ticker-track {
+  animation: foot-ticker 10s linear infinite;
+}
+@keyframes foot-ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+html.is-static .foot-ticker-track {
+  animation: none;
+}
+
+/* ?static=1: no transition sheets / washes over the films */
+html.is-static .inside-sheet,
+html.is-static .inside-wash,
+html.is-static .boxed-cover {
+  display: none;
+}
+
+/* ?static=1 (layout review): the X5 / X1 overlaps are motion only; sections sit one after the other */
+html.is-static #crown,
+html.is-static #orders {
+  margin-top: 0 !important;
+}
+
+/* ---------- Round 4 details ---------- */
+/* the CSS shine on solid buttons, played once by a class (hero, on arrival) as well as on hover */
+.btn-solid.shine-now::after {
+  transform: translateX(120%);
+}
+/* cake tickets lift on hover; the perforated stub tips open from its left notch (ticket tear) */
+.cake-tile {
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
+}
+.cake-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 24px -14px rgba(59, 36, 24, 0.45);
+}
+.cake-tile .ticket-stub,
+.feat-tile .ticket-stub {
+  transform-origin: 0 0;
+  transition: transform 0.45s var(--ease-out);
+}
+.cake-tile:hover .ticket-stub {
+  transform: rotate(-1.4deg) translateY(2px);
+}
+/* builder chips: a pink fill wipes in on hover (the pressed chip stays chocolate) */
+.chip {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+.chip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--paper);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease-wipe);
+}
+.chip:hover::before {
+  transform: scaleX(1);
+}
+.chip[aria-pressed="true"]::before {
+  display: none;
+}
+
+/* ---------- loader "Cake bar": pure CSS from the first paint (0 → 1.2 s) ---------- */
+@property --ld-n {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0;
+}
+.ld-bar {
+  /* a chocolate hairline like the tickets: the cream layer reads on the cream page */
+  box-shadow: inset 0 0 0 1.5px #3b2418;
+  transform: translateX(-130%);
+  opacity: 0;
+  animation: ld-bar 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.ld-bar-1 {
+  animation-delay: 0.05s;
+}
+.ld-bar-2 {
+  transform: translateX(130%);
+  animation-delay: 0.33s;
+}
+.ld-bar-3 {
+  animation-delay: 0.61s;
+}
+@keyframes ld-bar {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.ld-glow {
+  background: radial-gradient(circle, #f2b9c2 0%, rgba(247, 205, 211, 0.75) 38%, rgba(247, 205, 211, 0) 70%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.25);
+  animation: ld-glow 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes ld-glow {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+/* the counter counts 0 → 100 while the three layers go on */
+.ld-count {
+  animation: ld-count 0.9s linear forwards;
+  counter-reset: ld var(--ld-n);
+}
+.ld-count::after {
+  content: counter(ld);
+}
+@keyframes ld-count {
+  to {
+    --ld-n: 100;
+  }
+}
+/* at 100 a strawberry drops onto the cream with a small bounce */
+.ld-berry {
+  opacity: 0;
+  transform: translate(-50%, -70px) rotate(-14deg);
+  animation:
+    ld-berry 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) 0.9s forwards,
+    ld-sway 1.1s ease-in-out 1.32s infinite alternate;
+}
+@keyframes ld-berry {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -70px) rotate(-14deg);
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+}
+/* if the frames are still loading, the strawberry sways on its cream (never a still hold) */
+@keyframes ld-sway {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -3px) rotate(5deg);
+  }
+}
+/* the wordmark fades in under the cake */
+.ld-word {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: ld-word 0.35s ease-out 0.95s forwards;
+}
+@keyframes ld-word {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* ---------- basket drawer (the header's Basket pill) ---------- */
+.basket-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(59, 36, 24, 0.42);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s var(--ease-out), visibility 0s linear 0.4s;
+}
+.basket-scrim.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s var(--ease-out), visibility 0s;
+}
+.basket-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 95;
+  display: flex;
+  flex-direction: column;
+  width: min(430px, 100vw);
+  background: var(--paper);
+  border-left: 1.5px solid var(--choc);
+  box-shadow: -18px 0 44px rgba(59, 36, 24, 0.16);
+  visibility: hidden;
+  transform: translateX(102%);
+  transition: transform 0.55s var(--ease-out), visibility 0s linear 0.55s;
+}
+.basket-drawer.is-open {
+  visibility: visible;
+  transform: none;
+  transition: transform 0.55s var(--ease-out), visibility 0s;
+}
+.basket-head {
+  flex: none;
+  padding: 26px clamp(20px, 4vw, 30px) 0;
+}
+.basket-x {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--choc);
+  font-size: 14px;
+  line-height: 1;
+  transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+.basket-x:hover {
+  background: var(--choc);
+  color: var(--paper);
+}
+.basket-rule {
+  display: block;
+  height: 1px;
+  margin-top: 18px;
+  background: repeating-linear-gradient(90deg, var(--choc) 0 7px, transparent 7px 14px);
+  opacity: 0.55;
+}
+.basket-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px clamp(20px, 4vw, 30px) 30px;
+}
+.basket-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 16px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.basket-rm {
+  margin-top: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.25s var(--ease-out);
+}
+.basket-rm:hover {
+  color: var(--straw);
+}
+.basket-qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  border: 1.5px solid var(--choc);
+}
+.basket-qty button {
+  width: 27px;
+  height: 27px;
+  font-size: 15px;
+  line-height: 1;
+  transition: background 0.25s var(--ease-out), color 0.25s var(--ease-out);
+}
+.basket-qty button:hover {
+  background: var(--choc);
+  color: var(--paper);
+}
+.basket-qty span {
+  min-width: 22px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.basket-sub {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 0;
+  border-bottom: 1.5px solid var(--choc);
+}
+.basket-form {
+  padding-top: 18px;
+}
+.basket-form .chip {
+  transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+.basket-input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 9px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1.5px solid var(--choc);
+  border-radius: 0;
+  font-family: var(--font-body-family), sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.3s var(--ease-out);
+}
+.basket-input::placeholder {
+  color: var(--muted);
+  opacity: 0.5;
+}
+.basket-input:focus {
+  border-color: var(--straw);
+}
+.basket-drawer .btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.basket-done,
+.basket-empty {
+  display: grid;
+  gap: 14px;
+  padding-top: 18px;
+}
+.basket-slip {
+  border: 1.5px solid var(--choc);
+  background: var(--bg);
+  padding: 14px 16px;
+}
+.basket-slip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0;
+  padding: 4px 0;
+  font-size: 14px;
+}
+.basket-slip-total {
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+  font-weight: 700;
+}
+
+/* added while the drawer is closed: a small paper slip under the bar (inside <header>, top:100% = below the bar) */
+.basket-toast {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  pointer-events: none;
+  animation: basket-toast 0.5s var(--ease-out) both;
+}
+.basket-toast button {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(330px, calc(100vw - 28px));
+  padding: 10px 14px;
+  background: var(--paper);
+  border: 1.5px solid var(--choc);
+  box-shadow: 0 12px 26px rgba(59, 36, 24, 0.18);
+  text-align: left;
+}
+.basket-toast-tick {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  background: var(--straw);
+  color: var(--paper);
+  font-size: 13px;
+}
+.basket-toast-cta {
+  flex: none;
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--straw);
+}
+@keyframes basket-toast {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 640px) {
+  .basket-toast button {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+/* ?static=1: the drawer still opens and closes, it just arrives in place */
+html.is-static .basket-drawer,
+html.is-static .basket-scrim,
+html.is-static .basket-toast {
+  transition: none;
+  animation: none;
+}
