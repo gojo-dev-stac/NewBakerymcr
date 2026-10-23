@@ -118,6 +118,9 @@ export default function Bespoke() {
               </p>
               <button type="submit" className="btn btn-solid relative" data-cursor="Send" data-mag>
                 <span className="mag-label">{sent ? "Prepared" : "Prepare enquiry"}</span>
+                <svg className="slip-submit-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10h11m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </button>
             </div>
 

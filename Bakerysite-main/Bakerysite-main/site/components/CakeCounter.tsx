@@ -241,7 +241,7 @@ export default function CakeCounter() {
 
         <ul className="mt-3 grid grid-cols-4 gap-3 max-md:grid-cols-2">
           {counterSmall.map((s, i) => (
-            <li key={s.name} className="ticket tone-cream flex-row items-center justify-between border-[1.5px] border-[var(--choc)] px-4 py-3 max-md:flex-col max-md:items-start max-md:gap-1 max-md:px-3">
+            <li key={s.name} className="ticket counter-addon tone-cream flex-row items-center justify-between border-[1.5px] border-[var(--choc)] px-4 py-3 max-md:flex-col max-md:items-start max-md:gap-1 max-md:px-3">
               <span className="flex items-center gap-3">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={toppings[[1, 3, 0, 5][i]]} alt="" className="h-8 w-8 object-contain" />

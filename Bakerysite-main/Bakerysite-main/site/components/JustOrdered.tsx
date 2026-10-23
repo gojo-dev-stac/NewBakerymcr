@@ -44,7 +44,7 @@ export default function JustOrdered() {
         </div>
 
         <div className="home-picks-grid">
-          {picks.map(({ handle, label, collection, product, title, detail }) => (
+          {picks.map(({ handle, label, collection, product, title, detail }, index) => (
             <article className="home-pick" key={handle}>
               <a
                 className="home-pick-photo"
@@ -56,6 +56,7 @@ export default function JustOrdered() {
                   alt={product.name}
                   fill
                   sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 31vw"
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
               </a>
               <div className="home-pick-info">
