@@ -111,6 +111,7 @@ p {
 
 /* ---------- S10 stepped edge: three steps like cake tiers, sits on top of a section, in the section's colour ---------- */
 .step-edge {
+  display: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -1223,6 +1224,7 @@ html.is-static .slip-sheen {
 .tape {
   position: relative;
   z-index: 4;
+  background: var(--paper);
   color: var(--choc);
 }
 .tape-track {
@@ -1351,6 +1353,10 @@ html.basket-open {
 /* footer ticker: one full set slides by every 10 s */
 .foot-ticker-track {
   animation: foot-ticker 10s linear infinite;
+}
+.foot-ticker {
+  position: relative;
+  z-index: 4;
 }
 @keyframes foot-ticker {
   to {
