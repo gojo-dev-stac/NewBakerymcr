@@ -1221,6 +1221,8 @@ html.is-static .slip-sheen {
 
 /* the printer's tape under the bespoke form */
 .tape {
+  position: relative;
+  z-index: 4;
   color: var(--choc);
 }
 .tape-track {
@@ -1285,6 +1287,11 @@ html.is-static .bespoke-sweep {
 /* counter collection rail: one full set slides by every 34 s (supporting motion inside the counter) */
 .rail-track {
   animation: rail 34s linear infinite;
+}
+.rail {
+  position: relative;
+  z-index: 4;
+  background: var(--cream);
 }
 @keyframes rail {
   to {
